@@ -1,0 +1,16 @@
+{
+  "name": "generator-sails-diy",
+  "version": "0.0.1",
+  "description": "",
+  "files": [
+    "app",
+    "router"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "underscore.string": "^3.2.2",
+    "yeoman-generator": "^0.20.3"
+  }
+}
