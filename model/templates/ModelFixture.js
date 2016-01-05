@@ -2,4 +2,7 @@
  * Fixtures for <%= name %>
  */
 
-export default {};
+
+module.exports = [
+  // fixture objects
+];

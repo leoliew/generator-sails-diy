@@ -1,6 +1,9 @@
 /**
  * <%= name %>Controller
- * @description :: Server-side logic for ...
+ * @description :: Server-side logic for managing <%= name %>
+ * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-export default {};
+module.exports = {
+
+};

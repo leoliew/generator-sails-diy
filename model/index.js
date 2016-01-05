@@ -3,12 +3,11 @@
  */
 
 var generators = require('yeoman-generator');
-var yosay = require('yosay');
 var chalk = require('chalk');
 var mkdirp = require('mkdirp');
 var path = require('path');
+var fs = require('fs');
 var _s = require('underscore.string');
-var _ = require('lodash');
 
 var SOURCE_CONTROLLER = 'Controller.js';
 var SOURCE_CONTROLLER_TEST = 'Controller.test.js';
@@ -29,7 +28,7 @@ var DESTINATION_MODEL_TEST = function DESTINATION_MODEL_TEST(name) {
   return 'test/unit/models/' + name + '.test.js';
 };
 var DESTINATION_MODEL_FIXTURE = function DESTINATION_MODEL_FIXTURE(name) {
-  return 'test/fixtures/' + name + 'Fixture.js';
+  return 'test/fixtures/' + name + '.js';
 };
 
 
@@ -76,35 +75,6 @@ module.exports = generators.Base.extend({
     this.template(SOURCE_MODEL_TEST, DESTINATION_MODEL_TEST(name), { name: name });
     this.template(SOURCE_MODEL_FIXTURE, DESTINATION_MODEL_FIXTURE(name), { name: name });
 
-
-
-    //mkdirp.sync(this.destinationPath( path.join( app_name, 'api' ) ));
-    //mkdirp.sync(this.destinationPath( path.join( app_name, 'api/controllers' ) ) );
-    //mkdirp.sync(this.destinationPath( path.join( app_name, 'api/models' ) ) );
-    //mkdirp.sync(this.destinationPath( path.join( app_name, 'api/policies' ) ) );
-    //mkdirp.sync(this.destinationPath( path.join( app_name, 'api/services' ) ) );
-    //mkdirp.sync(this.destinationPath( path.join( app_name, 'config' ) ) );
-    //
-    //this.fs.copy(
-    //  this.templatePath('_lib/_app.js'),
-    //  this.destinationPath(path.join(app_name, 'lib/app.js'))
-    //);
-    //
-    //this.fs.copy(
-    //  this.templatePath('_lib/_sails/_loadControllers.js'),
-    //  this.destinationPath(path.join(app_name, 'lib/sails/_loadControllers.js'))
-    //);
-    //
-    //this.fs.copy(
-    //  this.templatePath('_lib/_sails/_loadPolicies.js'),
-    //  this.destinationPath(path.join(app_name, 'lib/sails/_loadPolicies.js'))
-    //);
-    //
-    //this.fs.copyTpl(
-    //  this.templatePath('_test/_basic.js'),
-    //  this.destinationPath(path.join(app_name, 'test/basic.js')),
-    //  this.props
-    //);
   },
 
   install: function () {

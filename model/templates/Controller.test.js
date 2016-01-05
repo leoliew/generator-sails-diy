@@ -1,8 +1,7 @@
-import { assert } from 'chai';
-import Controller from '../../../api/controllers/<%= name %>Controller';
+var should = require('should');
 
-describe('controllers:<%= name %>Controller', () => {
-  it('Should be tested', () => {
-    assert(false);
+describe('controllers:<%= name %>Controller', function(){
+  it('Should be tested', function(){
+    done();
   });
 });
