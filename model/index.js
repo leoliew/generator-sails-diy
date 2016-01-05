@@ -58,13 +58,8 @@ module.exports = generators.Base.extend({
   //},
 
   writing: function(){
-
-
-    console.log(this['model-name']);
-    console.log(this.options['rest']);
     var isREST = this.options['rest'];
     var name = (this['model-name'].charAt(0).toUpperCase() + this['model-name'].slice(1)).replace(/Model/, '');
-
 
     if (isREST && !fs.existsSync(this.destinationPath(DESTINATION_CONTROLLER(name)))) {
       this.template(SOURCE_CONTROLLER, DESTINATION_CONTROLLER(name), { name: name });

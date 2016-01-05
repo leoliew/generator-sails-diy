@@ -1,3 +1,3 @@
-./test/**/*.test.js
---reporter nyan
+./test/unit/**/*.test.js
+--reporter spec
 --recursive
