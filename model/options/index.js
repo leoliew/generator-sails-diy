@@ -18,7 +18,7 @@ module.exports = {
   'rest': {
     desc: 'Exposes REST interface to this model',
     type: Boolean,
-    defaults: true,
+    defaults: false,
     hide: false
   }
 };
