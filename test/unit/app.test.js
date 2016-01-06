@@ -1,7 +1,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe.only('sails-rest-api:app', function(){
+describe('sails-rest-api:app', function(){
   describe('Should properly scaffold with default configuration', function(){
     before(function(done){
       generators.test
@@ -27,9 +27,8 @@ describe.only('sails-rest-api:app', function(){
     it('Should properly create root files', function(){
       generators.assert.file([
         'app.js',
-        'Dockerfile',
+        //'Dockerfile',
         '.editorconfig',
-        'esdoc.json',
         '.gitignore',
         'package.json',
         'README.md',
@@ -80,7 +79,7 @@ describe.only('sails-rest-api:app', function(){
   //    generators.assert.file([
   //      'app.js',
   //      'Dockerfile',
-  //      '.editorconfig',
+  //      'editorconfig',
   //      'esdoc.json',
   //      '.gitignore',
   //      'package.json',
