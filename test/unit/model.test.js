@@ -2,9 +2,6 @@
  * Created by leo on 16-1-5.
  */
 
-
-
-
 var path = require('path');
 var generators = require('yeoman-generator');
 
