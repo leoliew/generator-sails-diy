@@ -2,7 +2,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe.only('sails-rest-api:cron', function(){
+describe('sails-rest-api:cron', function(){
   describe('Should properly scaffold empty cron configuration file', function(){
     before(function(done){
       generators.test.run(path.join(__dirname, '../../cron')).on('end', done)
