@@ -10,10 +10,11 @@
  * }];
  */
 
-var app = require('./app');
-var cron = require('./cron');
-
-module.exports = {
-  app: app,
-  cron: cron
-};
+module.exports = [
+  {
+    type: 'confirm',
+    name: 'cron:enabled',
+    message: 'Do you need cron?',
+    default: true
+  }
+];

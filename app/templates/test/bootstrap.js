@@ -1,15 +1,18 @@
-import Sails from 'sails';
-import config from '../config/env/test';
+var Sails = require('sails');
+require('should');
 
-let sails;
-
-before(done => {
-  Sails.lift(config, (error, server) => {
+before(function(done){
+  Sails.lift(config, function(error, server) {
     if (error) return done(error);
-
     sails = server;
     done();
   });
 });
 
-after(done => sails.lower(done));
+// Global after hook
+after(function (done) {
+  sails.log.verbose(); // Skip a line before displaying Sails lowering logs
+  sails.lower(function() {
+    done();
+  });
+});

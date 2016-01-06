@@ -8,7 +8,7 @@ module.exports = function(){
   this.copy('app.js', 'app.js');
   //this.copy('Dockerfile', 'Dockerfile');
   this.copy('editorconfig', '.editorconfig');
-  //this.copy('esdoc.json', 'esdoc.json');
+  this.copy('esdoc.json', 'esdoc.json');
   this.copy('gitignore', '.gitignore');
   this.copy('package.json', 'package.json');
   this.copy('README.md', 'README.md');
