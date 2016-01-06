@@ -6,7 +6,6 @@
 
 
 var path = require('path');
-var os = require('os');
 var generators = require('yeoman-generator');
 
 describe('sails-rest-api:model', function () {

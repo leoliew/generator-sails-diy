@@ -3,23 +3,26 @@
  */
 
 var generators = require('yeoman-generator');
+var yeoman_arguments = require('./arguments');
+var yeoman_options = require('./options');
 var steps = require('./steps');
 
 
 module.exports = generators.Base.extend({
-
   // note: arguments and options should be defined in the constructor.
   constructor: function () {
-    generators.Base.apply(this, arguments);
-    this.argument(
-      'model-name',
-      {
-        required: true,
-        type: String
-      }
-    );
-    this.option('rest');
-    // And you can then access it later on this way; e.g.
+    var constructor_method = this;
+    generators.Base.apply(constructor_method, arguments);
+
+    Object.keys(yeoman_arguments).forEach(function (key) {
+      return constructor_method.argument(key, yeoman_arguments[key]);
+    });
+
+    Object.keys(yeoman_options).forEach(function (key) {
+      return constructor_method.option(key, yeoman_options[key]);
+    });
+
+    constructor_method.description = 'Scaffolds a new model';
   },
 
   initializing: steps.initializing,
