@@ -46,7 +46,7 @@ module.exports = function(){
   //});
 
   if (this.answers['cron:enabled']) {
-    this.composeWith('sails-rest-api:cron', {
+    this.composeWith('sails-diy:cron', {
       args: [],
       options: {}
     });

@@ -21,6 +21,9 @@ describe.only('sails-rest-api:app', function(){
           [generators.test.createDummyGenerator(), 'sails-rest-api:service'],
           [generators.test.createDummyGenerator(), 'sails-rest-api:swagger']
         ])
+        .withPrompts({
+          'cron:enabled': false
+        })
         .on('end', done);
     });
 
@@ -37,12 +40,11 @@ describe.only('sails-rest-api:app', function(){
       ]);
     });
     //
-    //it('Should properly create mocha.opts and bootstrap', function(){
-    //  generators.assert.file([
-    //    'test/bootstrap.js',
-    //    'test/mocha.opts'
-    //  ]);
-    //});
+    it('Should properly create mocha.opts and bootstrap', function(){
+      generators.assert.file([
+        'test/bootstrap.js'
+      ]);
+    });
   });
 
   //describe('Should properly scaffold with custom configuration', function(){
