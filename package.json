@@ -2,19 +2,41 @@
   "name": "generator-sails-diy",
   "version": "0.0.2",
   "description": "sails yeoman generator",
+  "keywords": [
+    "yeoman-generator",
+    "sails",
+    "api",
+    "scaffold",
+    "yeoman",
+    "generator",
+    "rest"
+  ],
+  "homepage": "https://github.com/leoliew/generator-sails-diy",
+  "bugs": {
+    "url": "https://github.com/leoliew/generator-sails-diy/issues",
+    "email": "zmliu0077@gmail.com"
+  },
   "files": [
-    "app",
-    "model",
-    "router"
+    "model"
   ],
   "author": {
     "name": "Leo Liu",
     "email": "zmliu0077@gmail.com",
     "url": "https://github.com/leoliew"
   },
-  "keywords": [
-    "yeoman-generator"
+  "contributors": [
+    {
+      "name": "Leo Liu",
+      "url": "https://github.com/leoliew"
+    }
   ],
+  "scripts": {
+    "test": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leoliew/generator-sails-diy.git"
+  },
   "dependencies": {
     "chalk": "^1.1.1",
     "lodash": "^3.10.1",
@@ -26,8 +48,8 @@
     "mocha": "2.3.4",
     "istanbul": "0.4.1"
   },
-  "scripts": {
-    "test": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha"
+  "release": {
+    "branch": "master"
   },
   "license": "MIT"
 }
