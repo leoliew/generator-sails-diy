@@ -4,9 +4,13 @@
  */
 
 var DEPENDENCIES = [
-  'sails-hook-cron'
+  'sails-disk',
+  'sails-memory'
 ];
 
+
+
 module.exports = function(){
-  this.npmInstall(DEPENDENCIES, {save: true});
+  var adapter = ('sails-'+ this.options['database-adapter']).toLowerCase();
+  this.npmInstall(DEPENDENCIES.concat([adapter]), {save: true});
 };
