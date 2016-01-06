@@ -3,7 +3,7 @@
  * Where you prompt users for options (where you'd call this.prompt()).
  */
 
-var questions = require('../questions/index');
+var questions = require('../questions');
 
 module.exports = function(){
 
