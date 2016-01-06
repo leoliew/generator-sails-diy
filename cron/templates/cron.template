@@ -20,7 +20,7 @@
  */
 
 module.exports.cron = {
-  <% jobs.forEach(function(job) { %>
+  <% jobs.forEach(function(job,index) { %>
   '<%= job %>': {
     schedule: '* * * * * *',
     onTick: function(){
@@ -33,6 +33,10 @@ module.exports.cron = {
     start: true,
     timezone: undefined,
     context: undefined
+  <%if (index == jobs.length-1){%>
+  }
+  <%} else{ %>
   },
+  <%}%>
   <% }) %>
 };
