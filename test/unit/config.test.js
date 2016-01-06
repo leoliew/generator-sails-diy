@@ -1,7 +1,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe.only('sails-rest-api:config', function(){
+describe.only('sails-diy:config', function(){
   describe('Should properly scaffold default configuration', function(){
     before(function(done) {
       generators.test.run(path.join(__dirname, '../../config')).on('end', done)
@@ -42,7 +42,7 @@ describe.only('sails-rest-api:config', function(){
 
   describe('Should properly scaffold custom configuration', function(){
     before(function(done){
-      test
+      generators.test
         .run(path.join(__dirname, '../../config'))
         .withOptions({
           'database-adapter': 'mysql',
@@ -59,7 +59,7 @@ describe.only('sails-rest-api:config', function(){
     });
 
     it('Should properly create environment configuration files', function(){
-      assert.file([
+      generators.assert.file([
         'config/env/development.js',
         'config/env/production.js',
         'config/env/unit_test.js'
@@ -67,7 +67,7 @@ describe.only('sails-rest-api:config', function(){
     });
 
     it('Should properly create configuration files', function() {
-      assert.file([
+      generators.assert.file([
         'config/blueprints.js',
         'config/bootstrap.js',
         'config/connections.js',
@@ -79,15 +79,15 @@ describe.only('sails-rest-api:config', function(){
         'config/routes.js'
       ]);
 
-      assert.fileContent('config/connections.js', /host: '123\.456\.789\.000'/g);
-      assert.fileContent('config/connections.js', /database: 'db_name'/g);
-      assert.fileContent('config/connections.js', /user: 'db_user'/g);
-      assert.fileContent('config/connections.js', /password: 'db_pass'/g);
-      assert.fileContent('config/connections.js', /accessKeyId: 'access_key_id'/g);
-      assert.fileContent('config/connections.js', /secretAccessKey: 'secret_access_key'/g);
-      assert.fileContent('config/connections.js', /region: 'amazon_region'/g);
-      assert.fileContent('config/cors.js', /allRoutes: true/g);
-      assert.fileContent('config/models.js', /connection: 'mysql'/);
+      generators.assert.fileContent('config/connections.js', /host: '123\.456\.789\.000'/g);
+      generators.assert.fileContent('config/connections.js', /database: 'db_name'/g);
+      generators.assert.fileContent('config/connections.js', /user: 'db_user'/g);
+      generators.assert.fileContent('config/connections.js', /password: 'db_pass'/g);
+      generators.assert.fileContent('config/connections.js', /accessKeyId: 'access_key_id'/g);
+      generators.assert.fileContent('config/connections.js', /secretAccessKey: 'secret_access_key'/g);
+      generators.assert.fileContent('config/connections.js', /region: 'amazon_region'/g);
+      generators.assert.fileContent('config/cors.js', /allRoutes: true/g);
+      generators.assert.fileContent('config/models.js', /connection: 'mysql'/);
     });
   });
 });

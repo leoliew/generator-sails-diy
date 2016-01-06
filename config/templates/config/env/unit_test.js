@@ -3,24 +3,15 @@
  * @description :: This section overrides all other config values ONLY in test environment
  */
 
-export default {
-  log: {
-    level: 'silent'
-  },
-  models: {
-    connection: 'memory',
-    migrate: 'drop'
-  },
+module.exports = {
+
+  /***************************************************************************
+   * Set the default database connection for models in the development       *
+   * environment (see config/connections.js and config/models.js )           *
+   ***************************************************************************/
+
   policies: {
     '*': true
-  },
-  hooks: {
-    csrf: false,
-    grunt: false,
-    i18n: false,
-    pubsub: false,
-    session: false,
-    sockets: false,
-    views: false
   }
+
 };

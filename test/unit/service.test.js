@@ -5,7 +5,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe('sails-rest-api:service', function(){
+describe('sails-diy:service', function(){
   //describe('Should properly scaffold services without any options or arguments', () => {
   //  before(done => test.run(path.join(__dirname, '../../src/service')).on('end', done));
   //

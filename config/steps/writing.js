@@ -7,4 +7,5 @@
 
 module.exports = function(){
   this.directory('config', 'config');
+  this.fs.copy(this.templatePath('LocalesReadme.md'),'config/locales/_README.md');
 };

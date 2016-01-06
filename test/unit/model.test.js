@@ -5,7 +5,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe('sails-rest-api:model', function () {
+describe('sails-diy:model', function () {
   describe('Should properly scaffold model with REST interface', function () {
     before(function (done) {
       generators.test.run(path.join(__dirname, '../../model')).withArguments(['test']).withOptions({
