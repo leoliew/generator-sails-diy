@@ -3,6 +3,10 @@
  * Where installation are run (npm, bower)
  */
 
-module.exports = function(){
+var DEPENDENCIES = [
+  'sails-hook-cron'
+];
 
+module.exports = function(){
+  this.npmInstall(DEPENDENCIES, {save: true});
 };
