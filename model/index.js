@@ -3,18 +3,10 @@
  */
 
 var generators = require('yeoman-generator');
-var chalk = require('chalk');
-var mkdirp = require('mkdirp');
-var path = require('path');
-var fs = require('fs');
-var _s = require('underscore.string');
 var steps = require('./steps');
 
 
-
-
 module.exports = generators.Base.extend({
-
 
   // note: arguments and options should be defined in the constructor.
   constructor: function () {
