@@ -20,71 +20,28 @@ describe.only('sails-diy:views', function() {
         'assets/robots.txt'
       ]);
     });
-    //
-    //it('Should properly create configuration files', function(){
-    //  generators.assert.file([
-    //    'config/blueprints.js',
-    //    'config/bootstrap.js',
-    //    'config/connections.js',
-    //    'config/cors.js',
-    //    'config/errors.js',
-    //    'config/globals.js',
-    //    'config/http.js',
-    //    'config/models.js',
-    //    'config/routes.js'
-    //  ]);
-    //
-    //  generators.assert.fileContent('config/connections.js', /host: 'localhost'/g);
-    //  generators.assert.fileContent('config/connections.js', /database: 'sails-rest-api'/g);
-    //  generators.assert.fileContent('config/connections.js', /user: ''/g);
-    //  generators.assert.fileContent('config/connections.js', /password: ''/g);
-    //  generators.assert.fileContent('config/connections.js', /accessKeyId: ''/g);
-    //  generators.assert.fileContent('config/connections.js', /secretAccessKey: ''/g);
-    //  generators.assert.fileContent('config/connections.js', /region: 'us-west-1'/g);
-    //  generators.assert.fileContent('config/cors.js', /allRoutes: false/g);
-    //  generators.assert.fileContent('config/models.js', /connection: 'mongo'/);
-    //});
   });
 
   describe('Should properly scaffold default ejs view', function () {
     before(function (done) {
       generators.test
         .run(path.join(__dirname, '../../views'))
-        .withArguments(['ejs'])
+        .withArguments(['Ejs'])
         .on('end', done)
     });
 
     it('Should properly create configuration files', function(){
       generators.assert.file([
-        'config/env/development.js',
-        'config/env/production.js',
-        'config/env/unit_test.js'
+        'config/views.js',
+        'assets/images/.gitkeep',
+        'assets/js/dependencies/sails.io.js',
+        'assets/styles/importer.less',
+        'assets/templates/.gitkeep',
+        'assets/favicon.ico',
+        'assets/robots.txt'
       ]);
+      generators.assert.fileContent('config/views.js', /engine: 'ejs'/);
     });
-    //
-    //it('Should properly create configuration files', function(){
-    //  generators.assert.file([
-    //    'config/blueprints.js',
-    //    'config/bootstrap.js',
-    //    'config/connections.js',
-    //    'config/cors.js',
-    //    'config/errors.js',
-    //    'config/globals.js',
-    //    'config/http.js',
-    //    'config/models.js',
-    //    'config/routes.js'
-    //  ]);
-    //
-    //  generators.assert.fileContent('config/connections.js', /host: 'localhost'/g);
-    //  generators.assert.fileContent('config/connections.js', /database: 'sails-rest-api'/g);
-    //  generators.assert.fileContent('config/connections.js', /user: ''/g);
-    //  generators.assert.fileContent('config/connections.js', /password: ''/g);
-    //  generators.assert.fileContent('config/connections.js', /accessKeyId: ''/g);
-    //  generators.assert.fileContent('config/connections.js', /secretAccessKey: ''/g);
-    //  generators.assert.fileContent('config/connections.js', /region: 'us-west-1'/g);
-    //  generators.assert.fileContent('config/cors.js', /allRoutes: false/g);
-    //  generators.assert.fileContent('config/models.js', /connection: 'mongo'/);
-    //});
   });
 
 
@@ -92,42 +49,22 @@ describe.only('sails-diy:views', function() {
     before(function (done) {
       generators.test
         .run(path.join(__dirname, '../../views'))
-        .withArguments(['jade'])
+        .withArguments(['Jade'])
         .on('end', done);
     });
 
-    it('Should properly create configuration files', function () {
+    it('Should properly create configuration files', function(){
       generators.assert.file([
-        'config/env/development.js',
-        'config/env/production.js',
-        'config/env/unit_test.js'
+        'config/views.js',
+        'assets/images/.gitkeep',
+        'assets/js/dependencies/sails.io.js',
+        'assets/styles/importer.less',
+        'assets/templates/.gitkeep',
+        'assets/favicon.ico',
+        'assets/robots.txt'
       ]);
+      generators.assert.fileContent('config/views.js', /engine: 'jade'/);
     });
-    //
-    //it('Should properly create configuration files', function () {
-    //  generators.assert.file([
-    //    'config/blueprints.js',
-    //    'config/bootstrap.js',
-    //    'config/connections.js',
-    //    'config/cors.js',
-    //    'config/errors.js',
-    //    'config/globals.js',
-    //    'config/http.js',
-    //    'config/models.js',
-    //    'config/routes.js'
-    //  ]);
-    //
-    //
-    //  generators.assert.fileContent('config/connections.js', /host: '123\.456\.789\.000'/g);
-    //  generators.assert.fileContent('config/connections.js', /database: 'db_name'/g);
-    //  generators.assert.fileContent('config/connections.js', /user: 'db_user'/g);
-    //  generators.assert.fileContent('config/connections.js', /password: 'db_pass'/g);
-    //  generators.assert.fileContent('config/connections.js', /accessKeyId: 'access_key_id'/g);
-    //  generators.assert.fileContent('config/connections.js', /secretAccessKey: 'secret_access_key'/g);
-    //  generators.assert.fileContent('config/connections.js', /region: 'amazon_region'/g);
-    //  generators.assert.fileContent('config/cors.js', /allRoutes: true/g);
-    //  generators.assert.fileContent('config/models.js', /connection: 'mysql'/);
-    //});
   });
 });
 
