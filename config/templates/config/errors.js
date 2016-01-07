@@ -5,7 +5,7 @@
  * You can call then in your action res.ok(data, sails.config.errors.USER_NOT_FOUND);
  */
 
-module.expprts.error = {
+module.exports.error = {
   BAD_REQUEST: {
     code: 'E_BAD_REQUEST',
     message: 'The request cannot be fulfilled due to bad syntax',
