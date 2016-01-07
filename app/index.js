@@ -20,8 +20,6 @@ module.exports = generators.Base.extend({
     Object.keys(yeoman_options).forEach(function (key) {
       return constructor_method.option(key, yeoman_options[key]);
     });
-
-    constructor_method.description = 'Scaffolds a configuration for cron jobs';
   },
 
   initializing: steps.initializing,

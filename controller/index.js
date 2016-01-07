@@ -21,7 +21,7 @@ module.exports = generators.Base.extend({
       return constructor_method.option(key, yeoman_options[key]);
     });
 
-    constructor_method.description = 'Scaffolds a new configuration';
+    constructor_method.description = 'Scaffolds a new controller';
   },
 
   initializing: steps.initializing,

@@ -21,9 +21,9 @@ module.exports = {
   askApp: function askApp() {
     askQuestions.call(this, 'Application', questions.app, this.async());
   },
-  askConfig: function askConfig() {
-    askQuestions.call(this, 'Configuration', questions.config, this.async());
-  },
+  //askConfig: function askConfig() {
+  //  askQuestions.call(this, 'Configuration', questions.config, this.async());
+  //},
   //
   //askLogger: function askLogger() {
   //  askQuestions.call(this, 'Logger', questions.logger, this.async());
