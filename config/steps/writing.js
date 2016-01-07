@@ -4,7 +4,6 @@
  */
 
 
-
 module.exports = function(){
   this.directory('config', 'config');
   this.copy('cors.template', 'config/cors.js');

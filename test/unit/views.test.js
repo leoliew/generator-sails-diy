@@ -38,7 +38,12 @@ describe.only('sails-diy:views', function() {
         'assets/styles/importer.less',
         'assets/templates/.gitkeep',
         'assets/favicon.ico',
-        'assets/robots.txt'
+        'assets/robots.txt',
+        'views/403.ejs',
+        'views/404.ejs',
+        'views/500.ejs',
+        'views/homepage.ejs',
+        'views/layout.ejs'
       ]);
       generators.assert.fileContent('config/views.js', /engine: 'ejs'/);
     });
@@ -61,7 +66,12 @@ describe.only('sails-diy:views', function() {
         'assets/styles/importer.less',
         'assets/templates/.gitkeep',
         'assets/favicon.ico',
-        'assets/robots.txt'
+        'assets/robots.txt',
+        'views/403.jade',
+        'views/404.jade',
+        'views/500.jade',
+        'views/homepage.jade',
+        'views/layout.jade'
       ]);
       generators.assert.fileContent('config/views.js', /engine: 'jade'/);
     });

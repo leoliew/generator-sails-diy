@@ -3,10 +3,10 @@
  * Where installation are run (npm, bower)
  */
 
-var DEPENDENCIES = [
-  'ejs',
-  'jade'
-];
+var DEPENDENCIES = {
+  ejs: ['ejs'],
+  jade: ['jade']
+};
 
 module.exports = function(){
   var view_engine = this['views-engine'].toLowerCase();
