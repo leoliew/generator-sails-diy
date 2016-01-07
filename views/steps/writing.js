@@ -9,4 +9,5 @@ var DESTINATION_CRON = 'config/views.js';
 module.exports = function(){
   var view_engine = this['views-engine'].toLowerCase();
   this.template(SOURCE_CRON, DESTINATION_CRON, {'view_engine':view_engine});
+  this.directory('assets', 'assets');
 };

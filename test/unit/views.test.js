@@ -11,9 +11,13 @@ describe.only('sails-diy:views', function() {
 
     it('Should properly create configuration files', function(){
       generators.assert.file([
-        'config/views.js'
-        //'assets/env/production.js',
-        //'config/env/unit_test.js'
+        'config/views.js',
+        'assets/images/.gitkeep',
+        'assets/js/dependencies/sails.io.js',
+        'assets/styles/importer.less',
+        'assets/templates/.gitkeep',
+        'assets/favicon.ico',
+        'assets/robots.txt'
       ]);
     });
     //
