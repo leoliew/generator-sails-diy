@@ -14,7 +14,7 @@
  * };
  */
 
-module.export = {
+module.exports = {
   'response-name': {
     required: false,
     type: String,

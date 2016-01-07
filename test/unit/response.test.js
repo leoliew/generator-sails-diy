@@ -1,7 +1,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe.only('sails-rest-api:response', function(){
+describe.only('sails-diy:response', function(){
   describe('Should properly scaffold predefined response', function(){
     before(function(done){
       generators.test
@@ -50,7 +50,7 @@ describe.only('sails-rest-api:response', function(){
   describe('Should properly scaffold overridden predefined response', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../src/response'))
+        .run(path.join(__dirname, '../../response'))
         .withArguments(['ok'])
         .withOptions({
           'new': true
@@ -99,7 +99,7 @@ describe.only('sails-rest-api:response', function(){
   describe('Should properly scaffold all the predefined responses', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../src/response'))
+        .run(path.join(__dirname, '../../response'))
         .withOptions({
           'all': true
         })
@@ -140,7 +140,7 @@ describe.only('sails-rest-api:response', function(){
   describe('Should properly scaffold custom response', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../src/response'))
+        .run(path.join(__dirname, '../../response'))
         .withArguments(['custom'])
         .on('end', done)
     });

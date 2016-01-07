@@ -36,8 +36,8 @@ module.exports = function(){
     this.template(SOURCE_RESPONSE(), DESTINATION_RESPONSE(name), { name: name });
     this.template(SOURCE_RESPONSE_TEST(), DESTINATION_RESPONSE_TEST(name), { name: name });
   } else {
-    var responseTemplate = _fs2['default'].existsSync(this.templatePath(SOURCE_RESPONSE(name))) ? SOURCE_RESPONSE(name) : SOURCE_RESPONSE();
-    var testTemplate = _fs2['default'].existsSync(this.templatePath(SOURCE_RESPONSE_TEST(name))) ? SOURCE_RESPONSE_TEST(name) : SOURCE_RESPONSE_TEST();
+    var responseTemplate = fs.existsSync(this.templatePath(SOURCE_RESPONSE(name))) ? SOURCE_RESPONSE(name) : SOURCE_RESPONSE();
+    var testTemplate = fs.existsSync(this.templatePath(SOURCE_RESPONSE_TEST(name))) ? SOURCE_RESPONSE_TEST(name) : SOURCE_RESPONSE_TEST();
 
     this.template(responseTemplate, DESTINATION_RESPONSE(name), { name: name });
     this.template(testTemplate, DESTINATION_RESPONSE_TEST(name), { name: name });
