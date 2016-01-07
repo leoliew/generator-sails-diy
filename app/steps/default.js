@@ -6,7 +6,7 @@
 module.exports = function(){
 
   //if (this.answers['authentication:enabled']) {
-  //  this.composeWith('sails-rest-api:authentication', {
+  //  this.composeWith('sails-diy:authentication', {
   //    args: [],
   //    options: {
   //      'secret-key': this.answers['authentication:secret-key']
@@ -15,7 +15,7 @@ module.exports = function(){
   //}
   //
   //if (this.answers['blueprint:all']) {
-  //  this.composeWith('sails-rest-api:blueprint', {
+  //  this.composeWith('sails-diy:blueprint', {
   //    args: [],
   //    options: {
   //      'all': true
@@ -39,7 +39,7 @@ module.exports = function(){
   });
 
   //this.answers['controller:chosen'].forEach(function(controller){
-  //  this.composeWith('sails-rest-api:controller', {
+  //  this.composeWith('sails-diy:controller', {
   //    args: [controller],
   //    options: {}
   //  });
@@ -53,26 +53,26 @@ module.exports = function(){
   }
 
   //this.answers['hook:chosen'].forEach(function(hook){
-  //  this.composeWith('sails-rest-api:hook', {
+  //  this.composeWith('sails-diy:hook', {
   //    args: [hook],
   //    options: {}
   //  });
   //});
   //
-  //this.composeWith('sails-rest-api:logger', {
+  //this.composeWith('sails-diy:logger', {
   //  args: [this.answers['logger:chosen']],
   //  options: {}
   //});
   //
-  //this.composeWith('sails-rest-api:response', {
-  //  args: [],
-  //  options: {
-  //    'all': true
-  //  }
-  //});
+  this.composeWith('sails-diy:response', {
+    args: [],
+    options: {
+      'all': true
+    }
+  });
   //
   //this.answers['service:chosen'].forEach(function(service){
-  //  this.composeWith('sails-rest-api:service', {
+  //  this.composeWith('sails-diy:service', {
   //    args: [service],
   //    options: {
   //      'cipher-secret-key': this.answers['authentication:secret-key'],
@@ -87,7 +87,7 @@ module.exports = function(){
   //});
   //
   //if (this.answers['swagger:enabled']) {
-  //  this.composeWith('sails-rest-api:swagger', {
+  //  this.composeWith('sails-diy:swagger', {
   //    args: [],
   //    options: {}
   //  });
