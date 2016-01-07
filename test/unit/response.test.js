@@ -5,7 +5,7 @@ describe('sails-diy:response', function(){
   describe('Should properly scaffold predefined response', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../response'))
+        .run(path.join(__dirname, '../../src/response'))
         .withArguments(['ok'])
         .on('end', done)
     });
@@ -50,7 +50,7 @@ describe('sails-diy:response', function(){
   describe('Should properly scaffold overridden predefined response', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../response'))
+        .run(path.join(__dirname, '../../src/response'))
         .withArguments(['ok'])
         .withOptions({
           'new': true
@@ -99,7 +99,7 @@ describe('sails-diy:response', function(){
   describe('Should properly scaffold all the predefined responses', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../response'))
+        .run(path.join(__dirname, '../../src/response'))
         .withOptions({
           'all': true
         })
@@ -140,7 +140,7 @@ describe('sails-diy:response', function(){
   describe('Should properly scaffold custom response', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../response'))
+        .run(path.join(__dirname, '../../src/response'))
         .withArguments(['custom'])
         .on('end', done)
     });

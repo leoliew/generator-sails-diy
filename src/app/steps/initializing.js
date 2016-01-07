@@ -24,7 +24,7 @@ var onUpdateNotifier = function(done, error, update) {
 module.exports = {
 
   loadPackageInfo: function loadPackageInfo() {
-    this.pkg = require('../../package.json');
+    this.pkg = require('../../../package.json');
   },
 
   sayHello: function sayHello() {

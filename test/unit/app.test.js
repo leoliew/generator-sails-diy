@@ -5,7 +5,7 @@ describe('sails-diy:app', function(){
   describe('Should properly scaffold with default configuration', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../app'))
+        .run(path.join(__dirname, '../../src/app'))
         .withGenerators([
           [generators.test.createDummyGenerator(), 'sails-diy:adapter'],
           [generators.test.createDummyGenerator(), 'sails-diy:authentication'],
@@ -47,7 +47,7 @@ describe('sails-diy:app', function(){
   describe('Should properly scaffold with custom configuration', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../app'))
+        .run(path.join(__dirname, '../../src/app'))
         .withGenerators([
           [generators.test.createDummyGenerator(), 'sails-diy:adapter'],
           [generators.test.createDummyGenerator(), 'sails-diy:authentication'],

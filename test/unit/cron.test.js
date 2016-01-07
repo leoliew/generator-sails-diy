@@ -5,7 +5,7 @@ var generators = require('yeoman-generator');
 describe('sails-diy:cron', function(){
   describe('Should properly scaffold empty cron configuration file', function(){
     before(function(done){
-      generators.test.run(path.join(__dirname, '../../cron')).on('end', done)
+      generators.test.run(path.join(__dirname, '../../src/cron')).on('end', done)
     });
 
     it('Should properly create configuration files', function(){
@@ -20,7 +20,7 @@ describe('sails-diy:cron', function(){
   describe('Should properly scaffold cron configuration file with predefined jobs', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../cron'))
+        .run(path.join(__dirname, '../../src/cron'))
         .withArguments(['testJob', 'anotherJob'])
         .on('end', done)
     });

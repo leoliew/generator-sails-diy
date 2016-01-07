@@ -5,7 +5,7 @@ describe('sails-diy:views', function() {
   describe('Should properly scaffold default configuration', function () {
     before(function (done) {
       generators.test
-        .run(path.join(__dirname, '../../views'))
+        .run(path.join(__dirname, '../../src/views'))
         .on('end', done)
     });
 
@@ -25,7 +25,7 @@ describe('sails-diy:views', function() {
   describe('Should properly scaffold default ejs view', function () {
     before(function (done) {
       generators.test
-        .run(path.join(__dirname, '../../views'))
+        .run(path.join(__dirname, '../../src/views'))
         .withArguments(['Ejs'])
         .on('end', done)
     });
@@ -53,7 +53,7 @@ describe('sails-diy:views', function() {
   describe('Should properly scaffold default jade view', function () {
     before(function (done) {
       generators.test
-        .run(path.join(__dirname, '../../views'))
+        .run(path.join(__dirname, '../../src/views'))
         .withArguments(['Jade'])
         .on('end', done);
     });

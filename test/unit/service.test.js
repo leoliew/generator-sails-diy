@@ -205,7 +205,7 @@ describe('sails-diy:service', function(){
   describe('Should properly scaffold custom service', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../service'))
+        .run(path.join(__dirname, '../../src/service'))
         .withArguments(['CustomService'])
         .on('end', done)
     });

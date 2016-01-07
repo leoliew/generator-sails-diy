@@ -101,7 +101,7 @@ describe('sails-rest-api:controller', function(){
   describe('Should properly scaffold custom controller', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../controller'))
+        .run(path.join(__dirname, '../../src/controller'))
         .withArguments(['TicketController'])
         .on('end', done)
     });

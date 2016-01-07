@@ -8,7 +8,7 @@ var generators = require('yeoman-generator');
 describe('sails-diy:model', function () {
   describe('Should properly scaffold model with REST interface', function () {
     before(function (done) {
-      generators.test.run(path.join(__dirname, '../../model')).withArguments(['test']).withOptions({
+      generators.test.run(path.join(__dirname, '../../src/model')).withArguments(['test']).withOptions({
         'rest': true
       }).on('end', done);
     });
@@ -33,7 +33,7 @@ describe('sails-diy:model', function () {
 
   describe('Should properly scaffold model without REST interface', function () {
     before(function (done) {
-      generators.test.run(path.join(__dirname, '../../model')).withArguments(['anotherModel']).withOptions({
+      generators.test.run(path.join(__dirname, '../../src/model')).withArguments(['anotherModel']).withOptions({
         'rest': false
       }).on('end', done);
     });
