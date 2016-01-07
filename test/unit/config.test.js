@@ -1,10 +1,10 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe.only('sails-diy:config', function(){
+describe('sails-diy:config', function(){
   describe('Should properly scaffold default configuration', function(){
     before(function(done) {
-      generators.test.run(path.join(__dirname, '../../config')).on('end', done)
+      generators.test.run(path.join(__dirname, '../../src/config')).on('end', done)
     });
 
     it('Should properly create environment configuration files', function(){
@@ -43,7 +43,7 @@ describe.only('sails-diy:config', function(){
   describe('Should properly scaffold custom configuration', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../config'))
+        .run(path.join(__dirname, '../../src/config'))
         .withOptions({
           'database-adapter': 'mysql',
           'database-host': '123.456.789.000',

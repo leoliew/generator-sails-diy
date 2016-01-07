@@ -1,7 +1,8 @@
 {
   "name": "generator-sails-diy",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "sails yeoman generator",
+  "main": "generators/app/index.js",
   "keywords": [
     "yeoman-generator",
     "sails",
@@ -28,6 +29,10 @@
     }
   ],
   "scripts": {
+    "clean": "rm -rf ./generators",
+    "compile": "npm run clean && cp -r src/ generators/ ",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "prepublish": "npm run compile",
     "test": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha"
   },
   "repository": {
