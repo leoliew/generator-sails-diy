@@ -10,6 +10,5 @@
 
 module.exports = function(req, res, next) {
   // Do your logic here...
-
   next();
 };

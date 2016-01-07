@@ -65,7 +65,7 @@ module.exports.blueprints = {
    *                                                                          *
    * `rest` blueprint routes are enabled by default, and are suitable for use *
    * in a production scenario, as long you take standard security precautions *
-   * (combine w/ policies, etc.)                                              *
+   * (combine w/ policy, etc.)                                              *
    *                                                                          *
    ***************************************************************************/
   rest: false,

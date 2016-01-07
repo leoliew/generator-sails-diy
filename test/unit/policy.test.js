@@ -5,7 +5,7 @@ describe.only('sails-diy:policy', function(){
   describe('Should properly scaffold policy', function(){
     before(function(done){
       generators.test
-        .run(path.join(__dirname, '../../policies'))
+        .run(path.join(__dirname, '../../policy'))
         .withArguments(['IsAdmin'])
         .on('end', done)
     });
