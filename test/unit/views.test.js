@@ -1,7 +1,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe.only('sails-diy:views', function() {
+describe('sails-diy:views', function() {
   describe('Should properly scaffold default configuration', function () {
     before(function (done) {
       generators.test
