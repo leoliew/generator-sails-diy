@@ -3,5 +3,6 @@
  * Your initialization methods (checking current project state, getting configs, etc)
  */
 
-export default function () {
+module.exports = function(){
+
 };

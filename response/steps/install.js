@@ -3,10 +3,10 @@
  * Where installation are run (npm, bower)
  */
 
-const DEPENDENCIES = [
+var DEPENDENCIES = [
   'lodash'
 ];
 
-export default function () {
+module.exports = function(){
   this.npmInstall(DEPENDENCIES, {save: true});
 };

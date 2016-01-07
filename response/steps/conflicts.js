@@ -3,5 +3,6 @@
  * Where conflicts are handled (used internally)
  */
 
-export default function () {
+module.exports = function(){
+
 };

@@ -3,30 +3,43 @@
  * Where you write the generator specific files (routes, controllers, etc)
  */
 
-import fs from 'fs';
+var fs = require('fs');
 
-const SOURCE_RESPONSE = name => name ? `api/responses/${name}.js` : `Response.js`;
-const SOURCE_RESPONSE_TEST = name => name ? `test/unit/responses/${name}.test.js` : `Response.test.js`;
 
-const DESTINATION_RESPONSE = name => `api/responses/${name}.js`;
-const DESTINATION_RESPONSE_TEST = name => `test/unit/responses/${name}.test.js`;
+var SOURCE_RESPONSE = function(name) {
+  result = name ? 'api/responses/' + name + '.js' : 'Response.js';
+  return result;
+};
+var SOURCE_RESPONSE_TEST = function(name) {
+  result = name ? 'test/unit/responses/' + name + '.test.js' : 'Response.test.js';
+  return result;
+};
 
-export default function () {
-  let name = (this['response-name'].charAt(0).toLowerCase() + this['response-name'].slice(1)).replace(/Response/, '');
-  let isNew = this.options['new'];
-  let isAll = !name || this.options['all'];
+var DESTINATION_RESPONSE = function(name) {
+  result = 'api/responses/' + name + '.js';
+  return result;
+};
+var DESTINATION_RESPONSE_TEST = function(name) {
+  result = 'test/unit/responses/' + name + '.test.js';
+  return result;
+};
+
+module.exports = function(){
+  var name = (this['response-name'].charAt(0).toLowerCase() + this['response-name'].slice(1)).replace(/Response/, '');
+  var isNew = this.options['new'];
+  var isAll = !name || this.options['all'];
 
   if (isAll) {
-    this.directory(`api/responses`, `api/responses`);
-    this.directory(`test/unit/responses`, `test/unit/responses`);
+    this.directory('api/responses', 'api/responses');
+    this.directory('test/unit/responses', 'test/unit/responses');
   } else if (isNew) {
-    this.template(SOURCE_RESPONSE(), DESTINATION_RESPONSE(name), {name});
-    this.template(SOURCE_RESPONSE_TEST(), DESTINATION_RESPONSE_TEST(name), {name});
+    this.template(SOURCE_RESPONSE(), DESTINATION_RESPONSE(name), { name: name });
+    this.template(SOURCE_RESPONSE_TEST(), DESTINATION_RESPONSE_TEST(name), { name: name });
   } else {
-    let responseTemplate = fs.existsSync(this.templatePath(SOURCE_RESPONSE(name))) ? SOURCE_RESPONSE(name) : SOURCE_RESPONSE();
-    let testTemplate = fs.existsSync(this.templatePath(SOURCE_RESPONSE_TEST(name))) ? SOURCE_RESPONSE_TEST(name) : SOURCE_RESPONSE_TEST();
+    var responseTemplate = _fs2['default'].existsSync(this.templatePath(SOURCE_RESPONSE(name))) ? SOURCE_RESPONSE(name) : SOURCE_RESPONSE();
+    var testTemplate = _fs2['default'].existsSync(this.templatePath(SOURCE_RESPONSE_TEST(name))) ? SOURCE_RESPONSE_TEST(name) : SOURCE_RESPONSE_TEST();
 
-    this.template(responseTemplate, DESTINATION_RESPONSE(name), {name});
-    this.template(testTemplate, DESTINATION_RESPONSE_TEST(name), {name});
+    this.template(responseTemplate, DESTINATION_RESPONSE(name), { name: name });
+    this.template(testTemplate, DESTINATION_RESPONSE_TEST(name), { name: name });
   }
 };

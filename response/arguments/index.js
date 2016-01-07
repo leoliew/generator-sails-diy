@@ -2,7 +2,7 @@
  * Exports object that contains names of arguments as a key and their configuration objects as a value
  *
  * @example
- * export default {
+ * module.exports = {
  *   argumentName: {
  *     desc: 'Description for the argument',
  *     required: false,
@@ -14,7 +14,7 @@
  * };
  */
 
-export default {
+module.export = {
   'response-name': {
     required: false,
     type: String,

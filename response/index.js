@@ -1,47 +1,43 @@
-import { Base } from 'yeoman-generator';
-import generatorArguments from './arguments';
-import generatorOptions from './options';
-import generatorSteps from './steps';
+/**
+ * Created by leo on 16-1-5.
+ */
 
-export default class ResponseGenerator extends Base {
-  constructor(args, options) {
-    super(args, options);
+var generators = require('yeoman-generator');
+var yeoman_arguments = require('./arguments');
+var yeoman_options = require('./options');
+var steps = require('./steps');
 
-    Object.keys(generatorArguments).forEach(key => this.argument(key, generatorArguments[key]));
-    Object.keys(generatorOptions).forEach(key => this.option(key, generatorOptions[key]));
+module.exports = generators.Base.extend({
+  // note: arguments and options should be defined in the constructor.
+  constructor: function () {
+    var constructor_method = this;
+    generators.Base.apply(constructor_method, arguments);
 
-    this.description = 'Scaffold a new response';
-  }
+    Object.keys(yeoman_arguments).forEach(function (key) {
+      return constructor_method.argument(key, yeoman_arguments[key]);
+    });
 
-  get configuring() {
-    return generatorSteps.configuring;
-  }
+    Object.keys(yeoman_options).forEach(function (key) {
+      return constructor_method.option(key, yeoman_options[key]);
+    });
 
-  get conflicts() {
-    return generatorSteps.conflicts;
-  }
+    constructor_method.description = 'Scaffold a new response';
+  },
 
-  get default() {
-    return generatorSteps.default;
-  }
+  initializing: steps.initializing,
 
-  get end() {
-    return generatorSteps.end;
-  }
+  prompting: steps.prompting,
 
-  get initializing() {
-    return generatorSteps.initializing
-  }
+  configuring: steps.configuring,
 
-  get install() {
-    return generatorSteps.install;
-  }
+  default: steps.default,
 
-  get prompting() {
-    return generatorSteps.prompting
-  }
+  writing: steps.writing,
 
-  get writing() {
-    return generatorSteps.writing;
-  }
-}
+  conflicts: steps.conflicts,
+
+  install: steps.install,
+
+  end: steps.end
+
+});

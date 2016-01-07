@@ -2,7 +2,7 @@
  * Exports object that contains names of options as a key and their configuration objects as a value
  *
  * @example
- * export default {
+ * module.exports = {
  *   optionName: {
  *     desc: 'Description for the option',
  *     alias: 'Short name for the option',
@@ -13,7 +13,7 @@
  * };
  */
 
-export default {
+module.exports = {
   'new': {
     desc: 'Scaffolds a clean response (not predefined)',
     alias: 'n',

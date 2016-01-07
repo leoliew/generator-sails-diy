@@ -1,7 +1,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe.only('sails-diy:policy', function(){
+describe('sails-diy:policy', function(){
   describe('Should properly scaffold policy', function(){
     before(function(done){
       generators.test

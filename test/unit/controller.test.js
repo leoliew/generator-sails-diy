@@ -1,7 +1,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe.only('sails-rest-api:controller', function(){
+describe('sails-rest-api:controller', function(){
   //describe('Should properly scaffold controllers without arguments and options', function(){
   //  before(function(done){
   //    generators.test.run(path.join(__dirname, '../../controller')).on('end', done);
