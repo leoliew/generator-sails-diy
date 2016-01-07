@@ -1,7 +1,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe('sails-rest-api:app', function(){
+describe('sails-diy:app', function(){
   describe('Should properly scaffold with default configuration', function(){
     before(function(done){
       generators.test
@@ -21,6 +21,9 @@ describe('sails-rest-api:app', function(){
           [generators.test.createDummyGenerator(), 'sails-rest-api:service'],
           [generators.test.createDummyGenerator(), 'sails-rest-api:swagger']
         ])
+        .withPrompts({
+          'cron:enabled': false
+        })
         .on('end', done);
     });
 
@@ -29,6 +32,7 @@ describe('sails-rest-api:app', function(){
         'app.js',
         //'Dockerfile',
         '.editorconfig',
+        'esdoc.json',
         '.gitignore',
         'package.json',
         'README.md',
@@ -36,12 +40,11 @@ describe('sails-rest-api:app', function(){
       ]);
     });
     //
-    //it('Should properly create mocha.opts and bootstrap', function(){
-    //  generators.assert.file([
-    //    'test/bootstrap.js',
-    //    'test/mocha.opts'
-    //  ]);
-    //});
+    it('Should properly create mocha.opts and bootstrap', function(){
+      generators.assert.file([
+        'test/bootstrap.js'
+      ]);
+    });
   });
 
   //describe('Should properly scaffold with custom configuration', function(){

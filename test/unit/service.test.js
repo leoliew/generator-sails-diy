@@ -5,7 +5,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe('sails-rest-api:service', function(){
+describe('sails-diy:service', function(){
   //describe('Should properly scaffold services without any options or arguments', () => {
   //  before(done => test.run(path.join(__dirname, '../../src/service')).on('end', done));
   //
@@ -45,19 +45,19 @@ describe('sails-rest-api:service', function(){
   //
   //  it('Should properly create test files', () => {
   //    assert.file([
-  //      'test/unit/services/CipherService.test.js',
-  //      'test/unit/services/HashService.test.js',
-  //      'test/unit/services/ImageService.test.js',
-  //      'test/unit/services/LocationService.test.js',
-  //      'test/unit/services/MailerService.test.js',
-  //      'test/unit/services/PaymentService.test.js',
-  //      'test/unit/services/PusherService.test.js',
-  //      'test/unit/services/SmsService.test.js',
-  //      'test/unit/services/SocialService.test.js',
-  //      'test/unit/services/StorageService.test.js'
+  //      'test/unit/services/CipherService.unit_test.js',
+  //      'test/unit/services/HashService.unit_test.js',
+  //      'test/unit/services/ImageService.unit_test.js',
+  //      'test/unit/services/LocationService.unit_test.js',
+  //      'test/unit/services/MailerService.unit_test.js',
+  //      'test/unit/services/PaymentService.unit_test.js',
+  //      'test/unit/services/PusherService.unit_test.js',
+  //      'test/unit/services/SmsService.unit_test.js',
+  //      'test/unit/services/SocialService.unit_test.js',
+  //      'test/unit/services/StorageService.unit_test.js'
   //    ]);
   //
-  //    assert.fileContent('test/unit/services/CipherService.test.js', /import CipherService from '\.\.\/\.\.\/\.\.\/api\/services\/CipherService';/)
+  //    assert.fileContent('test/unit/services/CipherService.unit_test.js', /import CipherService from '\.\.\/\.\.\/\.\.\/api\/services\/CipherService';/)
   //  });
   //});
   //
@@ -111,22 +111,22 @@ describe('sails-rest-api:service', function(){
   //
   //  it('Should properly create test files', () => {
   //    assert.file([
-  //      'test/unit/services/CipherService.test.js'
+  //      'test/unit/services/CipherService.unit_test.js'
   //    ]);
   //
   //    assert.noFile([
-  //      'test/unit/services/HashService.test.js',
-  //      'test/unit/services/ImageService.test.js',
-  //      'test/unit/services/LocationService.test.js',
-  //      'test/unit/services/MailerService.test.js',
-  //      'test/unit/services/PaymentService.test.js',
-  //      'test/unit/services/PusherService.test.js',
-  //      'test/unit/services/SmsService.test.js',
-  //      'test/unit/services/SocialService.test.js',
-  //      'test/unit/services/StorageService.test.js'
+  //      'test/unit/services/HashService.unit_test.js',
+  //      'test/unit/services/ImageService.unit_test.js',
+  //      'test/unit/services/LocationService.unit_test.js',
+  //      'test/unit/services/MailerService.unit_test.js',
+  //      'test/unit/services/PaymentService.unit_test.js',
+  //      'test/unit/services/PusherService.unit_test.js',
+  //      'test/unit/services/SmsService.unit_test.js',
+  //      'test/unit/services/SocialService.unit_test.js',
+  //      'test/unit/services/StorageService.unit_test.js'
   //    ]);
   //
-  //    assert.fileContent('test/unit/services/CipherService.test.js', /import CipherService from '\.\.\/\.\.\/\.\.\/api\/services\/CipherService';/)
+  //    assert.fileContent('test/unit/services/CipherService.unit_test.js', /import CipherService from '\.\.\/\.\.\/\.\.\/api\/services\/CipherService';/)
   //  });
   //});
   //
@@ -183,22 +183,22 @@ describe('sails-rest-api:service', function(){
   //
   //  it('Should properly create test files', () => {
   //    assert.file([
-  //      'test/unit/services/CipherService.test.js'
+  //      'test/unit/services/CipherService.unit_test.js'
   //    ]);
   //
   //    assert.noFile([
-  //      'test/unit/services/HashService.test.js',
-  //      'test/unit/services/ImageService.test.js',
-  //      'test/unit/services/LocationService.test.js',
-  //      'test/unit/services/MailerService.test.js',
-  //      'test/unit/services/PaymentService.test.js',
-  //      'test/unit/services/PusherService.test.js',
-  //      'test/unit/services/SmsService.test.js',
-  //      'test/unit/services/SocialService.test.js',
-  //      'test/unit/services/StorageService.test.js'
+  //      'test/unit/services/HashService.unit_test.js',
+  //      'test/unit/services/ImageService.unit_test.js',
+  //      'test/unit/services/LocationService.unit_test.js',
+  //      'test/unit/services/MailerService.unit_test.js',
+  //      'test/unit/services/PaymentService.unit_test.js',
+  //      'test/unit/services/PusherService.unit_test.js',
+  //      'test/unit/services/SmsService.unit_test.js',
+  //      'test/unit/services/SocialService.unit_test.js',
+  //      'test/unit/services/StorageService.unit_test.js'
   //    ]);
   //
-  //    assert.fileContent('test/unit/services/CipherService.test.js', /import Service from '\.\.\/\.\.\/\.\.\/api\/services\/CipherService';/)
+  //    assert.fileContent('test/unit/services/CipherService.unit_test.js', /import Service from '\.\.\/\.\.\/\.\.\/api\/services\/CipherService';/)
   //  });
   //});
 
@@ -320,19 +320,19 @@ describe('sails-rest-api:service', function(){
   //
   //  it('Should properly create test files', () => {
   //    assert.file([
-  //      'test/unit/services/CipherService.test.js',
-  //      'test/unit/services/HashService.test.js',
-  //      'test/unit/services/ImageService.test.js',
-  //      'test/unit/services/LocationService.test.js',
-  //      'test/unit/services/MailerService.test.js',
-  //      'test/unit/services/PaymentService.test.js',
-  //      'test/unit/services/PusherService.test.js',
-  //      'test/unit/services/SmsService.test.js',
-  //      'test/unit/services/SocialService.test.js',
-  //      'test/unit/services/StorageService.test.js'
+  //      'test/unit/services/CipherService.unit_test.js',
+  //      'test/unit/services/HashService.unit_test.js',
+  //      'test/unit/services/ImageService.unit_test.js',
+  //      'test/unit/services/LocationService.unit_test.js',
+  //      'test/unit/services/MailerService.unit_test.js',
+  //      'test/unit/services/PaymentService.unit_test.js',
+  //      'test/unit/services/PusherService.unit_test.js',
+  //      'test/unit/services/SmsService.unit_test.js',
+  //      'test/unit/services/SocialService.unit_test.js',
+  //      'test/unit/services/StorageService.unit_test.js'
   //    ]);
   //
-  //    assert.fileContent('test/unit/services/CipherService.test.js', /import CipherService from '\.\.\/\.\.\/\.\.\/api\/services\/CipherService';/)
+  //    assert.fileContent('test/unit/services/CipherService.unit_test.js', /import CipherService from '\.\.\/\.\.\/\.\.\/api\/services\/CipherService';/)
   //  });
   //});
   //
@@ -394,16 +394,16 @@ describe('sails-rest-api:service', function(){
   //
   //  it('Should properly create test files', () => {
   //    assert.file([
-  //      'test/unit/services/CipherService.test.js',
-  //      'test/unit/services/HashService.test.js',
-  //      'test/unit/services/ImageService.test.js',
-  //      'test/unit/services/LocationService.test.js',
-  //      'test/unit/services/MailerService.test.js',
-  //      'test/unit/services/PaymentService.test.js',
-  //      'test/unit/services/PusherService.test.js',
-  //      'test/unit/services/SmsService.test.js',
-  //      'test/unit/services/SocialService.test.js',
-  //      'test/unit/services/StorageService.test.js'
+  //      'test/unit/services/CipherService.unit_test.js',
+  //      'test/unit/services/HashService.unit_test.js',
+  //      'test/unit/services/ImageService.unit_test.js',
+  //      'test/unit/services/LocationService.unit_test.js',
+  //      'test/unit/services/MailerService.unit_test.js',
+  //      'test/unit/services/PaymentService.unit_test.js',
+  //      'test/unit/services/PusherService.unit_test.js',
+  //      'test/unit/services/SmsService.unit_test.js',
+  //      'test/unit/services/SocialService.unit_test.js',
+  //      'test/unit/services/StorageService.unit_test.js'
   //    ]);
   //  });
   //});

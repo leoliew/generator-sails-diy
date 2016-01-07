@@ -10,10 +10,6 @@
  * }];
  */
 
-var app = require('./app');
-var cron = require('./cron');
+module.exports = [
 
-module.exports = {
-  app: app,
-  cron: cron
-};
+];
