@@ -9,5 +9,8 @@ var DEPENDENCIES = [
 ];
 
 module.exports = function(){
-  this.npmInstall(DEPENDENCIES, {save: true});
+  var view_engine = this['views-engine'].toLowerCase();
+  if(DEPENDENCIES[view_engine]){
+    this.npmInstall(DEPENDENCIES[view_engine], {save: true});
+  }
 };
