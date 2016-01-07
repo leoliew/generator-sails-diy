@@ -10,6 +10,6 @@
     "pubsub": false,
     "session": false,
     "sockets": false,
-    "views": false
+    "views": true
   }
 }
