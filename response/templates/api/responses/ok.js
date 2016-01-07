@@ -1,21 +1,48 @@
 /**
  * 200 (OK) Response
  *
- * General status code. Most common code used to indicate success.
- * The actual response will depend on the request method used.
- * In a GET request, the response will contain an entity corresponding to the requested resource.
- * In a POST request the response will contain an entity describing or containing the result of the action.
+ * Usage:
+ * return res.ok();
+ * return res.ok(data);
+ * return res.ok(data, 'auth/login');
+ *
+ * @param  {Object} data
+ * @param  {String|Object} options
+ *          - pass string to render specified view
  */
 
-import _ from 'lodash';
+module.exports = function sendOK (data, options) {
 
-export default function (data, config) {
-  let response = _.assign({
-    code: _.get(config, 'code', 'OK'),
-    message: _.get(config, 'message', 'Operation is successfully executed'),
-    data: data || {}
-  }, _.get(config, 'root', {}));
+  // Get access to `req`, `res`, & `sails`
+  var req = this.req;
+  var res = this.res;
+  var sails = req._sails;
 
-  this.res.status(200);
-  this.res.jsonx(response);
-}
+  sails.log.silly('res.ok() :: Sending 200 ("OK") response');
+
+  // Set status code
+  res.status(200);
+
+  // If appropriate, serve data as JSON(P)
+  if (req.wantsJSON) {
+    return res.jsonx(data);
+  }
+
+  // If second argument is a string, we take that to mean it refers to a view.
+  // If it was omitted, use an empty object (`{}`)
+  options = (typeof options === 'string') ? { view: options } : options || {};
+
+  // If a view was provided in options, serve it.
+  // Otherwise try to guess an appropriate view, or if that doesn't
+  // work, just send JSON.
+  if (options.view) {
+    return res.view(options.view, { data: data });
+  }
+
+  // If no second argument provided, try to serve the implied view,
+  // but fall back to sending JSON(P) if no view can be inferred.
+  else return res.guessView({ data: data }, function couldNotGuessView () {
+    return res.jsonx(data);
+  });
+
+};

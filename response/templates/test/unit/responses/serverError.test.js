@@ -1,43 +1,20 @@
-import { assert } from 'chai';
-import sinon from 'sinon';
-import serverError from '../../../api/responses/serverError';
+/**
+ * Created by leo on 1/20/15.
+ */
 
-const context = {
-  res: {
-    status: sinon.spy(),
-    jsonx: sinon.spy()
-  }
-};
 
-describe('responses:serverError', () => {
-  it('Should generate response with no params', () => {
-    serverError.call(context);
-    assert.ok(context.res.status.calledWith(500));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'E_INTERNAL_SERVER_ERROR',
-      message: 'Something bad happened on the server',
-      data: {}
-    }));
-  });
+var should = require('should');
+var request = require('superagent');
 
-  it('Should generate response with data param', () => {
-    serverError.call(context, 'MY_DATA');
-    assert.ok(context.res.status.calledWith(500));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'E_INTERNAL_SERVER_ERROR',
-      message: 'Something bad happened on the server',
-      data: 'MY_DATA'
-    }));
-  });
-
-  it('Should generate response with config param', () => {
-    serverError.call(context, 'MY_DATA', {code: 'MY_CODE', message: 'MY_MESSAGE', root: {root: 'MY_ROOT'}});
-    assert.ok(context.res.status.calledWith(500));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'MY_CODE',
-      message: 'MY_MESSAGE',
-      data: 'MY_DATA',
-      root: 'MY_ROOT'
-    }));
+describe("serverError Response test !", function() {
+  describe("test serverError request !", function() {
+    it("should response serverError view !", function(done) {
+      request.get(sails.getBaseurl()+"/api/v1/response/serverError")
+        .end(function(err,res){
+          res.text.should.match(/E_VIEW_FAILED/);
+          done() ;
+        }) ;
+    });
   });
 });
+

@@ -1,43 +1,20 @@
-import { assert } from 'chai';
-import sinon from 'sinon';
-import forbidden from '../../../api/responses/forbidden';
+/**
+ * Created by leo on 1/20/15.
+ */
 
-const context = {
-  res: {
-    status: sinon.spy(),
-    jsonx: sinon.spy()
-  }
-};
 
-describe('responses:forbidden', () => {
-  it('Should generate response with no params', () => {
-    forbidden.call(context);
-    assert.ok(context.res.status.calledWith(403));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'E_FORBIDDEN',
-      message: 'User not authorized to perform the operation',
-      data: {}
-    }));
-  });
+var should = require('should');
+var request = require('superagent');
 
-  it('Should generate response with data param', () => {
-    forbidden.call(context, 'MY_DATA');
-    assert.ok(context.res.status.calledWith(403));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'E_FORBIDDEN',
-      message: 'User not authorized to perform the operation',
-      data: 'MY_DATA'
-    }));
-  });
-
-  it('Should generate response with config param', () => {
-    forbidden.call(context, 'MY_DATA', {code: 'MY_CODE', message: 'MY_MESSAGE', root: {root: 'MY_ROOT'}});
-    assert.ok(context.res.status.calledWith(403));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'MY_CODE',
-      message: 'MY_MESSAGE',
-      data: 'MY_DATA',
-      root: 'MY_ROOT'
-    }));
+describe("forbidden Response test !", function() {
+  describe("test forbidden request !", function() {
+    it("should response forbidden view !", function(done) {
+      request.get(sails.getBaseurl()+"/api/v1/response/forbidden")
+        .end(function(err,res){
+          res.statusCode.should.match(403);
+          done() ;
+        }) ;
+    });
   });
 });
+

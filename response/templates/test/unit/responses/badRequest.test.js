@@ -1,43 +1,19 @@
-import { assert } from 'chai';
-import sinon from 'sinon';
-import badRequest from '../../../api/responses/badRequest';
+/**
+ * Created by leo on 1/20/15.
+ */
 
-const context = {
-  res: {
-    status: sinon.spy(),
-    jsonx: sinon.spy()
-  }
-};
+var should = require('should');
+var request = require('superagent');
 
-describe('responses:badRequest', () => {
-  it('Should generate response with no params', () => {
-    badRequest.call(context);
-    assert.ok(context.res.status.calledWith(400));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'E_BAD_REQUEST',
-      message: 'The request cannot be fulfilled due to bad syntax',
-      data: {}
-    }));
-  });
-
-  it('Should generate response with data param', () => {
-    badRequest.call(context, 'MY_DATA');
-    assert.ok(context.res.status.calledWith(400));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'E_BAD_REQUEST',
-      message: 'The request cannot be fulfilled due to bad syntax',
-      data: 'MY_DATA'
-    }));
-  });
-
-  it('Should generate response with config param', () => {
-    badRequest.call(context, 'MY_DATA', {code: 'MY_CODE', message: 'MY_MESSAGE', root: {root: 'MY_ROOT'}});
-    assert.ok(context.res.status.calledWith(400));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'MY_CODE',
-      message: 'MY_MESSAGE',
-      data: 'MY_DATA',
-      root: 'MY_ROOT'
-    }));
+describe("badRequest Response test !", function() {
+  describe("test bad request !", function() {
+    it("should response bad request view !", function(done) {
+      request.get(sails.getBaseurl()+"/api/v1/response/badRequset")
+        .end(function(err,res){
+          res.statusCode.should.match(400);
+          done();
+        });
+    });
   });
 });
+

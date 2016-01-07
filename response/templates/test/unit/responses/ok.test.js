@@ -1,43 +1,20 @@
-import { assert } from 'chai';
-import sinon from 'sinon';
-import ok from '../../../api/responses/ok';
+/**
+ * Created by leo on 1/20/15.
+ */
 
-const context = {
-  res: {
-    status: sinon.spy(),
-    jsonx: sinon.spy()
-  }
-};
 
-describe('responses:ok', () => {
-  it('Should generate response with no params', () => {
-    ok.call(context);
-    assert.ok(context.res.status.calledWith(200));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'OK',
-      message: 'Operation is successfully executed',
-      data: {}
-    }));
-  });
+var should = require('should');
+var request = require('superagent');
 
-  it('Should generate response with data param', () => {
-    ok.call(context, 'MY_DATA');
-    assert.ok(context.res.status.calledWith(200));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'OK',
-      message: 'Operation is successfully executed',
-      data: 'MY_DATA'
-    }));
-  });
-
-  it('Should generate response with config param', () => {
-    ok.call(context, 'MY_DATA', {code: 'MY_CODE', message: 'MY_MESSAGE', root: {root: 'MY_ROOT'}});
-    assert.ok(context.res.status.calledWith(200));
-    assert.ok(context.res.jsonx.calledWith({
-      code: 'MY_CODE',
-      message: 'MY_MESSAGE',
-      data: 'MY_DATA',
-      root: 'MY_ROOT'
-    }));
+describe("ok Response test !", function() {
+  describe("test ok request !", function() {
+    it("should response ok view !", function(done) {
+      request.get(sails.getBaseurl()+"/api/v1/response/ok")
+        .end(function(err,res){
+          res.statusCode.should.match(200);
+          done() ;
+        }) ;
+    });
   });
 });
+
