@@ -12,8 +12,10 @@
 
 var app = require('./app');
 var cron = require('./cron');
+var config = require('./config');
 
 module.exports = {
   app: app,
-  cron: cron
+  cron: cron,
+  config: config
 };
