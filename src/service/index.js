@@ -3,9 +3,9 @@
  */
 
 var generators = require('yeoman-generator');
-var yeoman_arguments = require('./arguments');
-var yeoman_options = require('./options');
-var steps = require('./steps');
+var yeoman_arguments = require('./arguments/index');
+var yeoman_options = require('./options/index');
+var steps = require('./steps/index');
 
 module.exports = generators.Base.extend({
   // note: arguments and options should be defined in the constructor.
@@ -21,7 +21,7 @@ module.exports = generators.Base.extend({
       return constructor_method.option(key, yeoman_options[key]);
     });
 
-    constructor_method.description = 'Scaffolds a configuration for cron jobs';
+    constructor_method.description = 'Scaffolds a new service';
   },
 
   initializing: steps.initializing,

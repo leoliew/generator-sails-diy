@@ -3,9 +3,9 @@
  */
 
 var generators = require('yeoman-generator');
-var yeoman_arguments = require('./arguments');
-var yeoman_options = require('./options');
-var steps = require('./steps');
+var yeoman_arguments = require('./arguments/index');
+var yeoman_options = require('./options/index');
+var steps = require('./steps/index');
 
 module.exports = generators.Base.extend({
   // note: arguments and options should be defined in the constructor.
