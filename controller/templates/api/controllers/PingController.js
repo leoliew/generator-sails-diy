@@ -1,6 +1,8 @@
 /**
  * PingController
- * @description :: Server-side logic that checks if app is alive
+ *
+ * @description :: Server-side logic for managing banners
+ * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
 module.exports = {
