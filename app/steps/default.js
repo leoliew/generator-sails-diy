@@ -70,6 +70,10 @@ module.exports = function(){
       'all': true
     }
   });
+  this.composeWith('sails-diy:views', {
+    args: [this.answers['views:chosen']],
+    options: {}
+  });
   //
   //this.answers['service:chosen'].forEach(function(service){
   //  this.composeWith('sails-diy:service', {

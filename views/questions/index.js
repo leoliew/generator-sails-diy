@@ -10,14 +10,6 @@
  * }];
  */
 
-var app = require('./app');
-var cron = require('./cron');
-var config = require('./config');
-var views = require('./views');
+module.exports = [
 
-module.exports = {
-  app: app,
-  cron: cron,
-  config: config,
-  views: views
-};
+];

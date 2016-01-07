@@ -10,14 +10,15 @@
  * }];
  */
 
-var app = require('./app');
-var cron = require('./cron');
-var config = require('./config');
-var views = require('./views');
-
-module.exports = {
-  app: app,
-  cron: cron,
-  config: config,
-  views: views
-};
+module.exports = [
+  {
+    type: 'list',
+    name: 'views:chosen',
+    message: 'Choose which view engine you want to configure',
+    default: 'Ejs',
+    choices: [
+      'Ejs',
+      'Jade'
+    ]
+  }
+];

@@ -1,7 +1,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe.only('sails-diy:response', function(){
+describe('sails-diy:response', function(){
   describe('Should properly scaffold predefined response', function(){
     before(function(done){
       generators.test

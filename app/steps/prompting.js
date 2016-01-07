@@ -18,10 +18,10 @@ var askQuestions = function (title, questions, done) {
 
 
 module.exports = {
-  askApp: function askApp() {
+  askApp: function() {
     askQuestions.call(this, 'Application', questions.app, this.async());
   },
-  askConfig: function askConfig() {
+  askConfig: function() {
     askQuestions.call(this, 'Configuration', questions.config, this.async());
   },
   //
@@ -41,9 +41,9 @@ module.exports = {
   //  askQuestions.call(this, 'Hook', questions.hook, this.async());
   //},
   //
-  askCron: function askCron() {
+  askCron: function() {
     askQuestions.call(this, 'Cron', questions.cron, this.async());
-  }
+  },
   //
   //askSwagger: function askSwagger() {
   //  askQuestions.call(this, 'Swagger', questions.swagger, this.async());
@@ -56,4 +56,7 @@ module.exports = {
   //askService: function askService() {
   //  askQuestions.call(this, 'Service', questions.service, this.async());
   //}
+  askViewEngine: function() {
+    askQuestions.call(this, 'Views', questions.views, this.async());
+  }
 };
