@@ -9,6 +9,5 @@ var DEPENDENCIES = [
 ];
 
 module.exports = function(){
-  console.log("abc"+this['views-engine']);
   this.npmInstall(DEPENDENCIES, {save: true});
 };
