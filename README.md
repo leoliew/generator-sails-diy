@@ -18,30 +18,52 @@ sails yeoman generator
 
 ## Getting Started
 
-- Make sure you have [yo](https://github.com/yeoman/yo) installed:
+Make sure you have [yo](https://github.com/yeoman/yo) installed:
 
-    `npm install -g yo`
-- Make sure you npm registry is official
+```bash
+npm install -g yo
+```
+    
+Make sure you npm registry is official
 
-    `npm set registry https://registry.npmjs.org/`
-- Install the generators:
+```bash
+npm set registry https://registry.npmjs.org/
+```
+  
+Install the generators:
 
-    `npm install -g generator-sails-diy`
-- Create project directory and `cd` into it:
+```bash
+npm install -g generator-sails-diy
+```
 
-    `mkdir my-project && cd $_`
-- Run sails-diy generator:
+Create project directory and `cd` into it:
 
-    `yo sails-diy`
-- To run project:
+```bash
+mkdir my-project && cd $_
+```
 
-    `sails lift`
-- To test:
+Run sails-diy generator:
 
-    `npm test`
-- To test and make coverage report:
+```bash
+yo sails-diy
+```
 
-    `npm run coverage`
+To run project:
+
+```bash
+sails lift
+```
+
+To test:
+
+```bash
+npm test
+```
+To test and make coverage report:
+
+```bash
+npm run coverage
+```
 
 ## License
 
