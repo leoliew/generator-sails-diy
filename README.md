@@ -20,6 +20,7 @@ sails yeoman generator
 
 - Make sure you have [yo](https://github.com/yeoman/yo) installed:
     `npm install -g yo`
+- Make sure you npm registry is official `npm set registry https://registry.npmjs.org/`
 - Install the generators: `npm install -g generator-sails-diy`
 - Create project directory and `cd` into it: `mkdir my-project && cd $_`
 - Run sails-diy generator: `yo sails-diy`
