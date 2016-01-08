@@ -20,5 +20,6 @@ module.exports = {
   app: app,
   cron: cron,
   config: config,
-  views: views
+  views: views,
+  grunt:grunt
 };

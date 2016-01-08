@@ -58,5 +58,8 @@ module.exports = {
   //}
   askViewEngine: function() {
     askQuestions.call(this, 'Views', questions.views, this.async());
+  },
+  askGrunt: function() {
+    askQuestions.call(this, 'Grunt', questions.grunt, this.async());
   }
 };
