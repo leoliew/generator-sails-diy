@@ -16,7 +16,8 @@
     "barrels": "^1.4.0",
     "mocha": "*",
     "should": "*",
-    "sails-memory": "^0.10.5"
+    "sails-memory": "^0.10.5",
+    "superagent": "^1.4.0"
   },
   "scripts": {
     "clean": "rm -rf ./.tmp",
