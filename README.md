@@ -15,3 +15,18 @@
 [DependencyStatus-url]:https://gemnasium.com/leoliew/generator-sails-diy
 
 sails yeoman generator
+
+## Getting Started
+
+- Make sure you have [yo](https://github.com/yeoman/yo) installed:
+    `npm install -g yo`
+- Install the generators: `npm install -g generator-sails-diy`
+- Create project directory and `cd` into it: `mkdir my-project && cd $_`
+- Run sails-diy generator: `yo sails-diy`
+- To run project: `sails lift`
+- To test: `npm test`
+- To test and make coverage report: `npm run coverage`
+
+## License
+
+MIT
