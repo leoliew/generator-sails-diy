@@ -10,15 +10,11 @@
  * }];
  */
 
-var app = require('./app');
-var cron = require('./cron');
-var config = require('./config');
-var views = require('./views');
-var grunt = require('./grunt');
-
-module.exports = {
-  app: app,
-  cron: cron,
-  config: config,
-  views: views
-};
+module.exports = [
+  {
+    type: 'confirm',
+    name: 'grunt:enabled',
+    message: 'Do you need grunt?',
+    default: false
+  }
+];

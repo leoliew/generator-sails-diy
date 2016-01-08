@@ -30,7 +30,7 @@ module.exports = {
   'database-name': {
     desc: 'Specifies a name of your database',
     type: String,
-    defaults: 'sails-rest-api'
+    defaults: 'sails-diy'
   },
 
   'database-username': {

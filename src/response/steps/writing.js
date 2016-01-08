@@ -30,6 +30,7 @@ module.exports = function(){
   var isAll = !name || this.options['all'];
 
   if (isAll) {
+    this.directory('api/controllers','api/controllers');
     this.directory('api/responses', 'api/responses');
     this.directory('test/unit/responses', 'test/unit/responses');
   } else if (isNew) {

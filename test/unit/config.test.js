@@ -29,7 +29,7 @@ describe('sails-diy:config', function(){
       ]);
 
       generators.assert.fileContent('config/connections.js', /host: 'localhost'/g);
-      generators.assert.fileContent('config/connections.js', /database: 'sails-rest-api'/g);
+      generators.assert.fileContent('config/connections.js', /database: 'sails-diy'/g);
       generators.assert.fileContent('config/connections.js', /user: ''/g);
       generators.assert.fileContent('config/connections.js', /password: ''/g);
       generators.assert.fileContent('config/connections.js', /accessKeyId: ''/g);
