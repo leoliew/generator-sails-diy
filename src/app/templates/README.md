@@ -13,7 +13,8 @@ a [Sails](http://sailsjs.org) application
 ## Test
 sails测试环境构建文件
 
-    test/bootstrap.js
+    test/bootstrap.js --启动文件
+    config/env/unit_test.js --测试环境配置
 
 测试用例目录结构
 
