@@ -52,6 +52,13 @@ module.exports = function(){
     });
   }
 
+  if (this.answers['grunt:enabled']) {
+    this.composeWith('sails-diy:grunt', {
+      args: [],
+      options: {}
+    });
+  }
+
   //this.answers['hook:chosen'].forEach(function(hook){
   //  this.composeWith('sails-diy:hook', {
   //    args: [hook],

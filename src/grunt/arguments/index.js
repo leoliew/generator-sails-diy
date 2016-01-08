@@ -16,10 +16,5 @@
 
 
 module.exports = {
-  'cron-jobs': {
-    desc: 'Jobs names',
-    required: false,
-    type: Array,
-    defaults: []
-  }
+
 };
