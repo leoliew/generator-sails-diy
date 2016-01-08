@@ -7,7 +7,7 @@ require('should');
 before(function(done){
   this.timeout(25000);
   // Lift Sails with test database
-  Sails.lift(config, function(error, sails) {
+  Sails.lift(config, function(err, sails) {
     if (err)
       return done(err);
     // Load fixtures
