@@ -46,7 +46,7 @@ module.exports = [
     type: 'input',
     name: 'config:database-name',
     message: 'Database name',
-    default: 'sails-rest-api',
+    default: 'sails-diy',
     when: whenDatabaseIsChosen(['Mongo', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
   }, {
     type: 'input',
