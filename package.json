@@ -1,6 +1,6 @@
 {
   "name": "generator-sails-diy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "sails yeoman generator",
   "main": "generators/app/index.js",
   "keywords": [
