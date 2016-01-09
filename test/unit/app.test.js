@@ -46,7 +46,10 @@ describe('sails-diy:app', function(){
 
     it('Should properly create api structure', function(){
       generators.assert.file([
-        'test/bootstrap.js'
+        'api/controllers/.gitkeep',
+        'api/models/.gitkeep',
+        'api/policies/sessionAuth.js',
+        'api/services/.gitkeep'
       ]);
     });
   });
@@ -102,7 +105,10 @@ describe('sails-diy:app', function(){
 
     it('Should properly create api structure', function(){
       generators.assert.file([
-        'test/bootstrap.js'
+        'api/controllers/.gitkeep',
+        'api/models/.gitkeep',
+        'api/policies/sessionAuth.js',
+        'api/services/.gitkeep'
       ]);
     });
   });
