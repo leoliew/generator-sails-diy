@@ -23,9 +23,9 @@ module.exports = [
     type: 'list',
     name: 'config:database-adapter',
     message: 'Database adapter',
-    default: 'Mongo',
+    default: 'Mongodb',
     choices: [
-      'Mongo',
+      'Mongodb',
       'Redis',
       'PostgreSQL',
       'MySQL',
@@ -41,25 +41,25 @@ module.exports = [
     name: 'config:database-host',
     message: 'Database host',
     default: 'localhost',
-    when: whenDatabaseIsChosen(['Mongo', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+    when: whenDatabaseIsChosen(['Mongodb', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
   }, {
     type: 'input',
     name: 'config:database-name',
     message: 'Database name',
     default: 'sails-diy',
-    when: whenDatabaseIsChosen(['Mongo', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+    when: whenDatabaseIsChosen(['Mongodb', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
   }, {
     type: 'input',
     name: 'config:database-username',
     message: 'Database username',
     default: '',
-    when: whenDatabaseIsChosen(['Mongo', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+    when: whenDatabaseIsChosen(['Mongodb', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
   }, {
     type: 'password',
     name: 'config:database-password',
     message: 'Database password',
     default: '',
-    when: whenDatabaseIsChosen(['Mongo', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+    when: whenDatabaseIsChosen(['Mongodb', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
   }, {
     type: 'input',
     name: 'config:dynamo-access-key-id',

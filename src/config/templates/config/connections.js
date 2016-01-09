@@ -24,7 +24,7 @@ module.exports.connections = {
    * MongoDB configuration
    * @type {Object}
    */
-  mongo: {
+  mongodb: {
     adapter: 'sails-mongo',
     host: '<%= options["database-host"] %>',
     port: 27017,
@@ -156,7 +156,7 @@ module.exports.connections = {
    * Local disk storage for DEVELOPMENT ONLY
    * @type {Object}
    */
-  localDiskDb: {
+  disk: {
     adapter: 'sails-disk'
   }
 };
