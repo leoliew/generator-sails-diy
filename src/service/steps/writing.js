@@ -14,7 +14,7 @@ var SOURCE_SERVICE_CONFIG = function(name) {
   return result;
 };
 var SOURCE_SERVICE_TEST = function(name) {
-  result = name ? 'test/unit/services/' + name + 'Service.test.js' : 'Service.test.js';
+  result = name ? 'test/unit/services/' + name + 'Service.test.template' : 'Service.test.template';
   return result;
 };
 
