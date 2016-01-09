@@ -36,8 +36,15 @@ describe('sails-diy:app', function(){
         '.sailsrc'
       ]);
     });
-    //
+
     it('Should properly create mocha.opts and bootstrap', function(){
+      generators.assert.file([
+        'test/bootstrap.js',
+        'test/mocha.opts'
+      ]);
+    });
+
+    it('Should properly create api structure', function(){
       generators.assert.file([
         'test/bootstrap.js'
       ]);
@@ -90,6 +97,12 @@ describe('sails-diy:app', function(){
       generators.assert.file([
         'test/bootstrap.js',
         'test/mocha.opts'
+      ]);
+    });
+
+    it('Should properly create api structure', function(){
+      generators.assert.file([
+        'test/bootstrap.js'
       ]);
     });
   });

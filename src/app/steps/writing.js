@@ -5,6 +5,7 @@
 
 module.exports = function(){
   this.directory('test', 'test');
+  this.directory('api', 'api');
   this.copy('app.js', 'app.js');
   //this.copy('Dockerfile', 'Dockerfile');
   this.copy('editorconfig', '.editorconfig');
