@@ -28,7 +28,7 @@ module.exports = {
   },
 
   sayHello: function sayHello() {
-    this.log(yosay('Welcome to the laudable ' + chalk.red('Sails REST API') + ' generator!'));
+    this.log(yosay('Welcome to the laudable ' + chalk.red('Sails DIY') + ' generator!'));
   },
 
   checkUpdates: function checkUpdates() {

@@ -6,7 +6,7 @@
 var fs = require('fs');
 
 var SOURCE_CONTROLLER = 'Controller.js';
-var SOURCE_CONTROLLER_TEST = 'Controller.test.js';
+var SOURCE_CONTROLLER_TEST = 'Controller.test.template';
 var SOURCE_MODEL = 'Model.js';
 var SOURCE_MODEL_TEST = 'Model.test.js';
 var SOURCE_MODEL_FIXTURE = 'ModelFixture.js';
