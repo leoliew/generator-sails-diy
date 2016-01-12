@@ -12,7 +12,8 @@ module.exports = {
    */
   _config: {
     rest: true,
-    actions: true
+    actions: true,
+    shortcuts: true
   }
 
 };
