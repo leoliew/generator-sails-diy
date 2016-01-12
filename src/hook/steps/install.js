@@ -3,15 +3,14 @@
  * Where installation are run (npm, bower)
  */
 
-const DEPENDENCIES = {
+var DEPENDENCIES = {
   count: ['lodash', 'pluralize'],
   pluralize: ['lodash']
 };
 
-export default function () {
-  let name = this['hook-name'].replace(/Hook/, '').toLowerCase();
-
+module.exports = function(){
+  var name = this['hook-name'].replace(/Hook/, '').toLowerCase();
   if (DEPENDENCIES[name]) {
-    this.npmInstall(DEPENDENCIES[name], {save: true});
+    this.npmInstall(DEPENDENCIES[name], { save: true });
   }
 };

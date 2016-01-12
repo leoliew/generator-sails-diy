@@ -2,22 +2,26 @@
  * Exports object that contains each of priority steps of yeoman run loop
  */
 
-import configuringSteps from './configuring';
-import conflictsSteps from './conflicts';
-import defaultSteps from './default';
-import endSteps from './end';
-import initializingSteps from './initializing';
-import installSteps from './install';
-import promptingSteps from './prompting';
-import writingSteps from './writing';
+var initializingSteps = require('./initializing');
+var promptingSteps = require('./prompting');
+var configuringSteps = require('./configuring');
+var defaultSteps = require('./default');
+var writingSteps = require('./writing');
+var conflictsSteps = require('./conflicts');
+var installSteps = require('./install');
+var endSteps = require('./end');
 
-export default {
-  configuring: configuringSteps,
-  conflicts: conflictsSteps,
-  default: defaultSteps,
-  end: endSteps,
+/**
+ * The available priorities are (in order)
+ * @type {{initializing: *, prompting: *, configuring: (*|exports|module.exports), default: *, writing: (*|exports|module.exports), conflicts: (*|exports|module.exports), install: *, end: *}}
+ */
+module.exports = {
   initializing: initializingSteps,
-  install: installSteps,
   prompting: promptingSteps,
-  writing: writingSteps
-}
+  configuring: configuringSteps,
+  default: defaultSteps,
+  writing: writingSteps,
+  conflicts: conflictsSteps,
+  install: installSteps,
+  end: endSteps
+};

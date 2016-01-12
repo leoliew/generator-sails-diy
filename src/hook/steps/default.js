@@ -3,5 +3,6 @@
  * Default priority in run loop
  */
 
-export default function () {
+module.exports = function(){
+
 };

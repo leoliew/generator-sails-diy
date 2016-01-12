@@ -3,7 +3,8 @@
  * Where you prompt users for options (where you'd call this.prompt()).
  */
 
-import questions from '../questions';
+var questions = require('../questions');
 
-export default function () {
+module.exports = function(){
+
 };
