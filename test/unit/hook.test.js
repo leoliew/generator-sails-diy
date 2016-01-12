@@ -1,7 +1,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe.only('sails-diy:hook', function(){
+describe('sails-diy:hook', function(){
   describe('Should properly scaffold without arguments and options', function(){
     before(function(done){
       generators.test.run(path.join(__dirname, '../../src/hook')).on('end', done)
