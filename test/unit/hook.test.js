@@ -84,7 +84,7 @@ describe('sails-diy:hook', function(){
         'api/hooks/CountHook.js'
       ]);
 
-      generators.assert.fileContent('api/hooks/PluralizeHook.js', /initialize: cb => cb\(\)/);
+      generators.assert.fileContent('api/hooks/PluralizeHook.js', /initialize: function initialize\(cb\)/);
       generators.assert.noFileContent('api/hooks/PluralizeHook.js', /sails.on\('router:before'/);
     });
 
@@ -99,7 +99,7 @@ describe('sails-diy:hook', function(){
     });
   });
 
-  describe('Should properly scaffold all predefined hooks at once', () => {
+  describe('Should properly scaffold all predefined hooks at once', function(){
     before(function(done){
       generators.test
         .run(path.join(__dirname, '../../src/hook'))
@@ -123,7 +123,7 @@ describe('sails-diy:hook', function(){
       generators.assert.fileContent('api/hooks/PluralizeHook.js', /sails.on\('router:before'/);
     });
 
-    it('Should properly create test files', () => {
+    it('Should properly create test files', function(){
       generators.assert.file([
         'test/unit/hooks/CountHook.test.js',
         'test/unit/hooks/PluralizeHook.test.js'
@@ -153,7 +153,7 @@ describe('sails-diy:hook', function(){
         'api/hooks/PluralizeHook.js'
       ]);
 
-      generators.assert.fileContent('api/hooks/TestHook.js', /initialize: cb => cb\(\)/);
+      generators.assert.fileContent('api/hooks/TestHook.js', /initialize: function initialize\(cb\)/);
     });
 
     it('Should properly create test files', function(){
