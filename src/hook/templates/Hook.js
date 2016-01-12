@@ -3,17 +3,25 @@
  * Hook that ...
  */
 
-export default function (sails) {
+module.exports = function(sails){
   return {
-    configure: () => true,
+    configure: function configure() {
+      return true;
+    },
 
-    defaults: config => config,
+    defaults: function defaults(config) {
+      return config;
+    },
 
-    initialize: cb => cb(),
+    initialize: function initialize(cb) {
+      return cb();
+    },
 
     routes: {
       before: {},
       after: {}
     }
-  }
+  };
 };
+
+

@@ -1,8 +1,9 @@
-import { assert } from 'chai';
-import Hook from '../../../api/hooks/<%= name %>Hook';
 
-describe('hooks:<%= name %>', () => {
-  it('Should be tested', () => {
-    assert(false);
+var should = require('should');
+var apiHooksNameHook = require('../../../api/hooks/<%= name %>Hook');
+
+describe('hooks:<%= name %>', function () {
+  it('Should be tested', function () {
+    should.exist(apiHooksNameHook);
   });
 });

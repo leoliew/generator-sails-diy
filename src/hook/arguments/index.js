@@ -17,7 +17,7 @@
 
 module.exports = {
   'hook-name': {
-    desc: 'hook names',
+    desc: 'hook name',
     required: false,
     type: String,
     defaults: ''
