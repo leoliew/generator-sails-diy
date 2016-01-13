@@ -3,6 +3,9 @@
  * Where you write the generator specific files (routes, controllers, etc)
  */
 
+var SOURCE_SRC = 'sailsrc';
+var DESTINATION_SRC = '.sailsrc';
+
 module.exports = function(){
   this.directory('test', 'test');
   this.directory('api', 'api');
@@ -13,5 +16,11 @@ module.exports = function(){
   this.copy('gitignore', '.gitignore');
   this.copy('package.json', 'package.json');
   this.copy('README.md', 'README.md');
-  this.copy('sailsrc', '.sailsrc');
+  var sails_config = {
+    grunt: false
+  };
+  if(this.answers['grunt:enabled']){
+    sails_config.grunt = true
+  }
+  this.template(SOURCE_SRC, DESTINATION_SRC, {'sails_config':sails_config});
 };

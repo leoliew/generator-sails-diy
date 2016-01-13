@@ -6,10 +6,11 @@
 
 module.exports = {
 
-  /**
-   * Overrides for the settings in `config/controllers.js`
-   * (specific to <%= name %>Controller)
-   */
+/**
+ * Overrides for the settings in `config/controllers.js`
+ * (specific to <%= name %>Controller)
+ */
+
   _config: {
     rest: true,
     actions: true,

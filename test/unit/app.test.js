@@ -13,6 +13,7 @@ describe('sails-diy:app', function(){
           [generators.test.createDummyGenerator(), 'sails-diy:config'],
           [generators.test.createDummyGenerator(), 'sails-diy:controller'],
           [generators.test.createDummyGenerator(), 'sails-diy:cron'],
+          [generators.test.createDummyGenerator(), 'sails-diy:grunt'],
           [generators.test.createDummyGenerator(), 'sails-diy:hook'],
           [generators.test.createDummyGenerator(), 'sails-diy:logger'],
           [generators.test.createDummyGenerator(), 'sails-diy:model'],
@@ -52,6 +53,10 @@ describe('sails-diy:app', function(){
         'api/services/.gitkeep'
       ]);
     });
+
+    it('Should properly generate sailsrc file', function(){
+      generators.assert.fileContent('.sailsrc', /"grunt": false/);
+    });
   });
 
   describe('Should properly scaffold with custom configuration', function(){
@@ -65,6 +70,7 @@ describe('sails-diy:app', function(){
           [generators.test.createDummyGenerator(), 'sails-diy:config'],
           [generators.test.createDummyGenerator(), 'sails-diy:controller'],
           [generators.test.createDummyGenerator(), 'sails-diy:cron'],
+          [generators.test.createDummyGenerator(), 'sails-diy:grunt'],
           [generators.test.createDummyGenerator(), 'sails-diy:hook'],
           [generators.test.createDummyGenerator(), 'sails-diy:logger'],
           [generators.test.createDummyGenerator(), 'sails-diy:model'],
@@ -79,6 +85,7 @@ describe('sails-diy:app', function(){
         })
         .withPrompts({
           'cron:enabled': false,
+          'grunt:enabled': true,
           'views:chosen': 'Jade'
         })
         .on('end', done);
@@ -110,6 +117,10 @@ describe('sails-diy:app', function(){
         'api/policies/sessionAuth.js',
         'api/services/.gitkeep'
       ]);
+    });
+
+    it('Should properly generate sailsrc file', function(){
+      generators.assert.fileContent('.sailsrc', /"grunt": true/);
     });
   });
 });
