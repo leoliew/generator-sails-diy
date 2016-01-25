@@ -73,7 +73,7 @@ describe('sails-diy:response', function(){
         //'api/responses/unauthorized.js'
       ]);
 
-      generators.assert.fileContent('api/responses/ok.js', /let response = \{data\};/);
+      generators.assert.fileContent('api/responses/ok.js', /response = \{ data: data \};/);
       generators.assert.noFileContent('api/responses/ok.js', /_\.get\(config, 'code', 'OK'\)/);
     });
 
@@ -92,7 +92,7 @@ describe('sails-diy:response', function(){
         //'test/unit/responses/unauthorized.test.js'
       ]);
 
-      generators.assert.fileContent('test/unit/responses/ok.test.js', /import Response from '\.\.\/\.\.\/\.\.\/api\/responses\/ok';/);
+      generators.assert.fileContent('test/unit/responses/ok.test.js', /var apiResponsesName/);
     });
   });
 
@@ -161,7 +161,7 @@ describe('sails-diy:response', function(){
         //'api/responses/unauthorized.js'
       ]);
 
-      generators.assert.fileContent('api/responses/custom.js', /let response = \{data\}/);
+      generators.assert.fileContent('api/responses/custom.js', /response = \{ data: data \};/);
     });
 
     it('Should properly create test files', function(){
@@ -180,7 +180,7 @@ describe('sails-diy:response', function(){
         //'test/unit/responses/unauthorized.test.js'
       ]);
 
-      generators.assert.fileContent('test/unit/responses/custom.test.js', /import Response from '\.\.\/\.\.\/\.\.\/api\/responses\/custom';/);
+      generators.assert.fileContent('test/unit/responses/custom.test.js', /var apiResponsesName/);
     });
   });
 });

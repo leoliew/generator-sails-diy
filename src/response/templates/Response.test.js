@@ -1,16 +1,22 @@
-import { assert } from 'chai';
-import sinon from 'sinon';
-import Response from '../../../api/responses/<%= name %>';
+'use strict';
 
-const context = {
+
+var chai = require('chai');
+
+var sinon = require('sinon');
+
+var apiResponsesName = require('../../../api/responses/<%= name %>');
+
+
+var context = {
   res: {
     status: sinon.spy(),
     jsonx: sinon.spy()
   }
 };
 
-describe('responses:<%= name %>', () => {
-  it('Should be tested', () => {
+describe('responses:<%= name %>', function () {
+  it('Should be tested', function () {
     assert(false);
-  })
+  });
 });
