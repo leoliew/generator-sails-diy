@@ -55,7 +55,7 @@ describe('sails-diy:app', function(){
     });
 
     it('Should properly generate sailsrc file', function(){
-      generators.assert.fileContent('.sailsrc', /"grunt": false/);
+      generators.assert.fileContent('.sailsrc', /"sockets": false/);
     });
   });
 
@@ -120,7 +120,7 @@ describe('sails-diy:app', function(){
     });
 
     it('Should properly generate sailsrc file', function(){
-      generators.assert.fileContent('.sailsrc', /"grunt": true/);
+      generators.assert.fileContent('.sailsrc', /"sockets": false/);
     });
   });
 });
