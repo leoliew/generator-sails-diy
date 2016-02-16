@@ -5,11 +5,9 @@
   },
   "hooks": {
     "pubsub": false,
-    "sockets": false,
-    <%_ if (sails_config.grunt){_%>
-    "grunt": true
-    <%_} else{ _%>
-    "grunt": false
+    "sockets": false
+    <%_ if (!sails_config.grunt){_%>
+    ,"grunt": false
     <%_}_%>
   }
 }

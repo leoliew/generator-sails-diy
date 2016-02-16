@@ -23,9 +23,9 @@ module.exports = [
     type: 'list',
     name: 'config:database-adapter',
     message: 'Database adapter',
-    default: 'Mongodb',
+    default: 'Mongo',
     choices: [
-      'Mongodb',
+      'Mongo',
       'Redis',
       'PostgreSQL',
       'MySQL',
@@ -42,14 +42,14 @@ module.exports = [
     name: 'config:database-host',
     message: 'Database host',
     default: 'localhost',
-    when: whenDatabaseIsChosen(['Mongodb', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+    when: whenDatabaseIsChosen(['Mongo', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
   },
   {
     type: 'input',
     name: 'config:database-name',
     message: 'Database name',
     default: 'sails-diy',
-    when: whenDatabaseIsChosen(['Mongodb', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+    when: whenDatabaseIsChosen(['Mongo', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
   },
   //------------------------------------------------------
   {
@@ -57,7 +57,7 @@ module.exports = [
     name: 'config:database-port',
     message: 'Database port',
     default: 27017,
-    when: whenDatabaseIsChosen(['Mongodb'])
+    when: whenDatabaseIsChosen(['Mongo'])
   },
   {
     type: 'input',
@@ -93,13 +93,13 @@ module.exports = [
     name: 'config:database-username',
     message: 'Database username',
     default: '',
-    when: whenDatabaseIsChosen(['Mongodb', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+    when: whenDatabaseIsChosen(['Mongo', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
   }, {
     type: 'password',
     name: 'config:database-password',
     message: 'Database password',
     default: '',
-    when: whenDatabaseIsChosen(['Mongodb', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+    when: whenDatabaseIsChosen(['Mongo', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
   },
   {
     type: 'input',
