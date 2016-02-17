@@ -17,10 +17,14 @@ module.exports = function(){
   this.copy('package.json', 'package.json');
   this.copy('README.md', 'README.md');
   var sails_config = {
-    grunt: false
+    grunt: false,
+    pm2:false
   };
   if(this.answers['grunt:enabled']){
     sails_config.grunt = true
+  }
+  if(this.answers['pm2:enabled']){
+    sails_config.pm2 = true
   }
   this.template(SOURCE_SRC, DESTINATION_SRC, {'sails_config':sails_config});
 };
