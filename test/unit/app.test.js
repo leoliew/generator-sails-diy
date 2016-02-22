@@ -1,7 +1,7 @@
 var path = require('path');
 var generators = require('yeoman-generator');
 
-describe('sails-diy:app', function(){
+describe.only('sails-diy:app', function(){
   describe('Should properly scaffold with default configuration', function(){
     before(function(done){
       generators.test
@@ -57,6 +57,15 @@ describe('sails-diy:app', function(){
     it('Should properly generate sailsrc file', function(){
       generators.assert.fileContent('.sailsrc', /"sockets": false/);
     });
+
+    //TODO: add pm2 yo generatoer test
+    it('Should properly could not create pm2 bin folder', function(){
+      generators.assert.noFile([
+        'bin/processes_beta.json',
+        'bin/processes_server_a.json'
+      ]);
+    });
+
   });
 
   describe('Should properly scaffold with custom configuration', function(){
@@ -122,5 +131,14 @@ describe('sails-diy:app', function(){
     it('Should properly generate sailsrc file', function(){
       generators.assert.fileContent('.sailsrc', /"sockets": false/);
     });
+
+    //TODO: add pm2 yo generatoer test
+    //it('Should properly have pm2 bin folder', function(){
+    //  generators.assert.file([
+    //    'bin/processes_beta.json',
+    //    'bin/processes_server_a.json'
+    //  ]);
+    //});
+
   });
 });
