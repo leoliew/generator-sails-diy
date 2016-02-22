@@ -10,7 +10,7 @@ var SOURCE_CONTROLLER = function(name) {
   return result;
 };
 var SOURCE_CONTROLLER_TEST = function(name) {
-  result = name ? 'test/unit/controllers/' + name + 'Controller.test.js' : 'Controller.test.js';
+  result = name ? 'test/unit/controllers/' + name + 'Controller.test.template' : 'Controller.test.template';
   return result;
 };
 

@@ -1,6 +1,6 @@
-export default function (data) {
-  let response = {data};
-
+module.exports = function (data) {
+  var response = { data: data };
   this.res.status(200);
-  this.res.jsonx(response);
-}
+  this.res.json(response);
+};
+

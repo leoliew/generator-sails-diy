@@ -21,7 +21,7 @@ module.exports = generators.Base.extend({
       return constructor_method.option(key, yeoman_options[key]);
     });
 
-    constructor_method.description = 'Scaffolds a configuration for grunt task runner';
+    constructor_method.description = 'Scaffolds a new hook';
   },
 
   initializing: steps.initializing,

@@ -23,9 +23,9 @@ module.exports = [
     type: 'list',
     name: 'config:database-adapter',
     message: 'Database adapter',
-    default: 'Mongodb',
+    default: 'Mongo',
     choices: [
-      'Mongodb',
+      'Mongo',
       'Redis',
       'PostgreSQL',
       'MySQL',
@@ -36,49 +36,93 @@ module.exports = [
       'Memory',
       'Disk'
     ]
-  }, {
+  },
+  {
     type: 'input',
     name: 'config:database-host',
     message: 'Database host',
     default: 'localhost',
-    when: whenDatabaseIsChosen(['Mongodb', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
-  }, {
+    when: whenDatabaseIsChosen(['Mongo', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+  },
+  {
     type: 'input',
     name: 'config:database-name',
     message: 'Database name',
     default: 'sails-diy',
-    when: whenDatabaseIsChosen(['Mongodb', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
-  }, {
+    when: whenDatabaseIsChosen(['Mongo', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+  },
+  //------------------------------------------------------
+  {
+    type: 'input',
+    name: 'config:database-port',
+    message: 'Database port',
+    default: 27017,
+    when: whenDatabaseIsChosen(['Mongo'])
+  },
+  {
+    type: 'input',
+    name: 'config:database-port',
+    message: 'Database port',
+    default: 6379,
+    when: whenDatabaseIsChosen(['Redis'])
+  },
+  {
+    type: 'input',
+    name: 'config:database-port',
+    message: 'Database port',
+    default: 5432,
+    when: whenDatabaseIsChosen(['PostgreSQL'])
+  },
+  {
+    type: 'input',
+    name: 'config:database-port',
+    message: 'Database port',
+    default: 3306,
+    when: whenDatabaseIsChosen(['MySQL'])
+  },
+  {
+    type: 'input',
+    name: 'config:database-port',
+    message: 'Database port',
+    default: 2424,
+    when: whenDatabaseIsChosen(['OrientDB'])
+  },
+  //------------------------------------------------------
+  {
     type: 'input',
     name: 'config:database-username',
     message: 'Database username',
     default: '',
-    when: whenDatabaseIsChosen(['Mongodb', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+    when: whenDatabaseIsChosen(['Mongo', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
   }, {
     type: 'password',
     name: 'config:database-password',
     message: 'Database password',
     default: '',
-    when: whenDatabaseIsChosen(['Mongodb', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
-  }, {
+    when: whenDatabaseIsChosen(['Mongo', 'Redis', 'PostgreSQL', 'MySQL', 'SQLServer', 'OrientDB', 'FileMaker'])
+  },
+  {
     type: 'input',
     name: 'config:dynamo-access-key-id',
     message: 'DynamoDB Access Key ID',
     default: '',
     when: whenDatabaseIsChosen(['DynamoDB'])
-  }, {
+  },
+  {
     type: 'input',
     name: 'config:dynamo-secret-access-key',
     message: 'DynamoDB Secret Access Key',
     default: '',
     when: whenDatabaseIsChosen(['DynamoDB'])
-  }, {
+  },
+  {
     type: 'input',
     name: 'config:dynamo-region',
     message: 'DynamoDB region',
     default: 'us-west-1',
     when: whenDatabaseIsChosen(['DynamoDB'])
-  }, {
+  },
+  {
     type: 'confirm',
     name: 'config:cors',
     message: 'Enable CORS?',

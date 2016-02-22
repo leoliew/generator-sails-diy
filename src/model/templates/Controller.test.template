@@ -1,0 +1,8 @@
+var should = require('should');
+var <%= name %>Controller = require('../../../api/controllers/<%= name %>Controller');
+
+describe('controllers:<%= name %>Controller', function(){
+  it('Should be tested', function(){
+    should.exist(<%= name %>Controller);
+  });
+});

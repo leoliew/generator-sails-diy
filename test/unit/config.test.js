@@ -25,7 +25,12 @@ describe('sails-diy:config', function(){
         'config/globals.js',
         'config/http.js',
         'config/models.js',
-        'config/routes.js'
+        'config/routes.js',
+        'config/local.js',
+        'config/log.js',
+        'config/policies.js',
+        'config/session.js',
+        'config/sockets.js'
       ]);
 
       generators.assert.fileContent('config/connections.js', /host: 'localhost'/g);
@@ -76,7 +81,12 @@ describe('sails-diy:config', function(){
         'config/globals.js',
         'config/http.js',
         'config/models.js',
-        'config/routes.js'
+        'config/routes.js',
+        'config/local.js',
+        'config/log.js',
+        'config/policies.js',
+        'config/session.js',
+        'config/sockets.js'
       ]);
 
       generators.assert.fileContent('config/connections.js', /host: '123\.456\.789\.000'/g);

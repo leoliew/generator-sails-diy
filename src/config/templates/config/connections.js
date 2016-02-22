@@ -27,7 +27,7 @@ module.exports.connections = {
   mongodb: {
     adapter: 'sails-mongo',
     host: '<%= options["database-host"] %>',
-    port: 27017,
+    port: '<%= options["database-port"] %>',
     user: '<%= options["database-username"] %>',
     password: '<%= options["database-password"] %>',
     database: '<%= options["database-name"] %>'
@@ -39,7 +39,7 @@ module.exports.connections = {
    */
   redis: {
     adapter: 'sails-redis',
-    port: 6379,
+    port: '<%= options["database-port"] %>',
     host: '<%= options["database-host"] %>',
     password: '<%= options["database-password"] %>',
     database: '<%= options["database-name"] %>',
@@ -63,7 +63,7 @@ module.exports.connections = {
     host: '<%= options["database-host"] %>',
     user: '<%= options["database-username"] %>',
     password: '<%= options["database-password"] %>',
-    port: 5432,
+    port: '<%= options["database-port"] %>',
     pool: false,
     ssl: false
   },
@@ -75,7 +75,7 @@ module.exports.connections = {
   mysql: {
     adapter: 'sails-mysql',
     host: '<%= options["database-host"] %>',
-    port: 3306,
+    port: '<%= options["database-port"] %>',
     user: '<%= options["database-username"] %>',
     password: '<%= options["database-password"] %>',
     database: '<%= options["database-name"] %>',
@@ -105,7 +105,7 @@ module.exports.connections = {
   orientdb: {
     adapter: 'sails-orientdb',
     host: '<%= options["database-host"] %>',
-    port: 2424,
+    port: '<%= options["database-port"] %>',
     user: '<%= options["database-username"] %>',
     password: '<%= options["database-password"] %>',
     database: '<%= options["database-name"] %>',

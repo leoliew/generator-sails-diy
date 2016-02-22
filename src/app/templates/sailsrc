@@ -4,11 +4,10 @@
     }
   },
   "hooks": {
-    "csrf": false,
-    "grunt": false,
-    "i18n": false,
     "pubsub": false,
-    "session": false,
     "sockets": false
+    <%_ if (!sails_config.grunt){_%>
+    ,"grunt": false
+    <%_}_%>
   }
 }
