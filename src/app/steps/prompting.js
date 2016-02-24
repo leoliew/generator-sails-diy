@@ -62,7 +62,7 @@ module.exports = {
   askGrunt: function() {
     askQuestions.call(this, 'Grunt', questions.grunt, this.async());
   },
-  askGrunt: function() {
+  askPm2: function() {
     askQuestions.call(this, 'Pm2', questions.pm2, this.async());
   }
 };
