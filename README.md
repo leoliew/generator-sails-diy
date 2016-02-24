@@ -30,7 +30,7 @@ sails yeoman generator
 
 ## Generator Command
 
-* ```yo sails-diy:controller Test --rest```(Create a controller in your app)
+* ```yo sails-diy:controller Test```(Create a controller in your app)
 * ```yo sails-diy:model Ticket --rest```(Create a model in your app)
 * ```yo sails-diy:cron cron1 cron2```(Create a cron in your app)
 * ```yo sails-diy:service ping```(Create a service in your app)
