@@ -1,8 +1,10 @@
 module.exports = function (grunt) {
-	grunt.registerTask('syncAssets', [
-		'jst:dev',
-		'less:dev',
-		'sync:dev',
-		'coffee:dev'
-	]);
+  //jst,coffee 模板编译目前没用到，注释
+  grunt.registerTask('syncAssets', [
+    'clean:dev',
+    //'jst:dev',
+    'less:dev',
+    'sync:dev'
+    //'coffee:dev'
+  ]);
 };
