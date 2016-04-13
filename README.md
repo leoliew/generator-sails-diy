@@ -38,6 +38,11 @@ sails yeoman generator
 * ```npm start```(Compose your API and run)
 * ```npm test```(Run unit test in your project)
 
+## TODO
+
+* install adapter that version is Assign
+* multiply adapter chooser
+
 ## License
 
 MIT
