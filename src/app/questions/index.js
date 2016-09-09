@@ -14,16 +14,13 @@ var app = require('./app');
 var cron = require('./cron');
 var config = require('./config');
 var views = require('./views');
-// var grunt = require('./grunt');
-var pm2 = require('./pm2');
 var febuild = require('./febuild');
+
 
 module.exports = {
   app: app,
   cron: cron,
   config: config,
   views: views,
-  grunt:grunt,
-  pm2:pm2,
   febuild: febuild
 };
