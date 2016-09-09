@@ -18,8 +18,7 @@ module.exports = function(){
   this.copy('README.md', 'README.md');
   var sails_config = {
     grunt: false,
-    gulp: false,
-    pm2: false
+    gulp: false
   };
   // if(this.answers['grunt:enabled']){
   //   sails_config.grunt = true
@@ -30,8 +29,6 @@ module.exports = function(){
   if (this.answers['febuild:chosen'] == 'Grunt'){
     sails_config.grunt = true
   }
-  if(this.answers['pm2:enabled']){
-    sails_config.pm2 = true
-  }
+
   this.template(SOURCE_SRC, DESTINATION_SRC, {'sails_config':sails_config});
 };

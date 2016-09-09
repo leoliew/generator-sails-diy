@@ -34,8 +34,6 @@ module.exports = {
   },
   askFebuild: function() {
     askQuestions.call(this, 'Febuild', questions.febuild, this.async());
-  },
-
   }
 
 };
