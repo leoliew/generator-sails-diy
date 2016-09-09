@@ -17,7 +17,7 @@
 
 module.exports = {
   'febuild': {
-    desc: 'Font end build tool (grunt, gulp)',
+    desc: 'Front end build tool (grunt, gulp)',
     required: false,
     type: String,
     defaults: 'Grunt'
