@@ -12,9 +12,13 @@
 
 module.exports = [
   {
-    type: 'confirm',
-    name: 'grunt:enabled',
-    message: 'Do you need grunt?',
-    default: false
+    type: 'list',
+    name: 'febuild:chosen',
+    message: 'Choose which front-end build tool you want to configure',
+    default: 'Grunt',
+    choices: [
+      'Grunt',
+      'Gulp'
+    ]
   }
 ];
