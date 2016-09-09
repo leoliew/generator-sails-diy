@@ -13,7 +13,7 @@ describe('sails-diy:app', function(){
           [generators.test.createDummyGenerator(), 'sails-diy:config'],
           [generators.test.createDummyGenerator(), 'sails-diy:controller'],
           [generators.test.createDummyGenerator(), 'sails-diy:cron'],
-          [generators.test.createDummyGenerator(), 'sails-diy:grunt'],
+          [generators.test.createDummyGenerator(), 'sails-diy:febuild'],
           [generators.test.createDummyGenerator(), 'sails-diy:hook'],
           [generators.test.createDummyGenerator(), 'sails-diy:logger'],
           [generators.test.createDummyGenerator(), 'sails-diy:model'],
@@ -79,7 +79,7 @@ describe('sails-diy:app', function(){
           [generators.test.createDummyGenerator(), 'sails-diy:config'],
           [generators.test.createDummyGenerator(), 'sails-diy:controller'],
           [generators.test.createDummyGenerator(), 'sails-diy:cron'],
-          [generators.test.createDummyGenerator(), 'sails-diy:grunt'],
+          [generators.test.createDummyGenerator(), 'sails-diy:febuild'],
           [generators.test.createDummyGenerator(), 'sails-diy:hook'],
           [generators.test.createDummyGenerator(), 'sails-diy:logger'],
           [generators.test.createDummyGenerator(), 'sails-diy:model'],
@@ -94,7 +94,7 @@ describe('sails-diy:app', function(){
         })
         .withPrompts({
           'cron:enabled': false,
-          'grunt:enabled': true,
+          'febuild:chosen': 'Grunt',
           'views:chosen': 'Jade'
         })
         .on('end', done);
