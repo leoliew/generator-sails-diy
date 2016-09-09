@@ -1,10 +1,18 @@
-FROM node:slim
+FROM registry.aliyuncs.com/vauto/docker-ubuntu
 
-MAINTAINER Eugene Obrezkov <ghaiklor@gmail.com>
+MAINTAINER Leo Liu <zmliu0077@gmail.com>
 
-RUN mkdir /app
-VOLUME ["/app"]
-WORKDIR /app
-EXPOSE 3000
+EXPOSE 9001
 
-CMD npm start
+RUN mkdir -p /data
+
+# use changes to package.json to force Docker not to use the cache
+# when we change our application's nodejs dependencies:
+COPY package.json /tmp/package.json
+RUN cd /tmp && npm install
+RUN cp -a /tmp/node_modules /data
+
+WORKDIR /data
+ADD . /data
+
+CMD ["sails","lift","--prod"]
