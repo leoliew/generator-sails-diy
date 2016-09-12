@@ -131,14 +131,6 @@ describe('sails-diy:app', function(){
     it('Should properly generate sailsrc file', function(){
       generators.assert.fileContent('.sailsrc', /"sockets": false/);
     });
-
-    //TODO: add pm2 yo generatoer test
-    //it('Should properly have pm2 bin folder', function(){
-    //  generators.assert.file([
-    //    'bin/processes_beta.json',
-    //    'bin/processes_server_a.json'
-    //  ]);
-    //});
-
+    
   });
 });
