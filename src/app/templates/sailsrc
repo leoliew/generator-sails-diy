@@ -12,5 +12,8 @@
     <%_ if (!sails_config.grunt){_%>
     ,"grunt": false
     <%_}_%>
+    <%_ if (!sails_config.gulp){_%>
+      ,"gulptask": true
+    <%_}_%>
   }
 }

@@ -54,9 +54,7 @@ try {
  */
 function loadTasks(relPath) {
   var filter = /(.+)\.js$/;
-  if(process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() === 'production'){
-    filter = /(.+)\.prod\.js$/;
-  }
+
   return includeAll({
       dirname: require('path').resolve(__dirname, relPath),
       filter: filter

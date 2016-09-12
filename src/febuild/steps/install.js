@@ -38,7 +38,7 @@ var DEPENDENCIES = {
     "gulp-rev@^7.1.2",
     "rimraf@^2.5.1",
     "run-sequence@^1.1.5",
-    "sails-hook-gulp@0.0.1"
+    "sails-hook-gulptask@1.0.2"
   ]
 };
 
