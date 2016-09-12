@@ -27,12 +27,11 @@ module.exports = function(){
     });
   }
 
-  if (this.answers['grunt:enabled']) {
-    this.composeWith('sails-diy:grunt', {
-      args: [],
-      options: {}
-    });
-  }
+
+  this.composeWith('sails-diy:febuild', {
+    args: [this.answers['febuild:chosen']],
+    options: {}
+  });
 
   this.composeWith('sails-diy:response', {
     args: [],

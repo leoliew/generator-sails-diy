@@ -42,6 +42,7 @@ sails yeoman generator
 
 * install adapter that version is Assign
 * multiply adapter chooser
+* use "request-info" package in this project 
 
 ## License
 

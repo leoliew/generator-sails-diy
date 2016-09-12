@@ -1,6 +1,9 @@
 {
   "generators": {
     "modules": {
+      <%_ if (sails_config.gulp){_%>
+        "gulp": "sails-generate-gulp"
+      <%_}_%>
     }
   },
   "hooks": {

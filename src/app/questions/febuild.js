@@ -10,17 +10,15 @@
  * }];
  */
 
-var app = require('./app');
-var cron = require('./cron');
-var config = require('./config');
-var views = require('./views');
-var febuild = require('./febuild');
-
-
-module.exports = {
-  app: app,
-  cron: cron,
-  config: config,
-  views: views,
-  febuild: febuild
-};
+module.exports = [
+  {
+    type: 'list',
+    name: 'febuild:chosen',
+    message: 'Choose which front-end build tool you want to configure',
+    default: 'Grunt',
+    choices: [
+      'Grunt',
+      'Gulp'
+    ]
+  }
+];
