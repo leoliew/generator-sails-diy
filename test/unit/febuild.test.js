@@ -3,7 +3,7 @@ var generators = require('yeoman-generator');
 
 describe('sails-diy:febuild', function() {
 
-  describe('Should properly scaffold default grunt tool', function () {
+  describe('Should properly scaffold default febuild tool', function () {
     before(function (done) {
       generators.test
         .run(path.join(__dirname, '../../src/febuild'))
@@ -30,7 +30,7 @@ describe('sails-diy:febuild', function() {
   });
 
 
-  describe('Should properly scaffold default gulp tool', function () {
+  describe('Should properly scaffold default febuild tool', function () {
     before(function (done) {
       generators.test
         .run(path.join(__dirname, '../../src/febuild'))

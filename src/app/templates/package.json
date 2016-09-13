@@ -8,7 +8,8 @@
     "bcrypt": "^0.8.5",
     "bytes": "^2.1.0",
     "rc": "1.0.1",
-    "sails": "0.12.4"
+    "sails": "0.12.4",
+    "sails-hook-request-info": "^0.0.8"
   },
   "devDependencies": {
     "istanbul": "^0.3.6",
