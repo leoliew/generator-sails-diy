@@ -44,7 +44,6 @@ describe('sails-diy:febuild', function() {
         'tasks/config/clean.js',
         'tasks/config/copy.js',
         'tasks/config/less.js',
-        'tasks/config/sync.js',
         'tasks/config/watcher.js',
         'tasks/config/filerev.js',
         'tasks/config/replacerev.js',
