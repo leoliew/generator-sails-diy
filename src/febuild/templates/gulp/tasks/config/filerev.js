@@ -28,7 +28,7 @@ module.exports = function(gulp, plugins, growl) {
 
     return gulp.src(['.tmp/public/**/!(analytics).{js,css}', '!.tmp/public/ueditor/**'])
             .pipe(cssFilter)
-            .pipe(plugins.csso())
+            .pipe(plugins.cssnano())
             .pipe(cssFilter.restore)
             .pipe(plugins.rev())
             .pipe(gulp.dest('.tmp/public'))

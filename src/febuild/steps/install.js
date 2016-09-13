@@ -33,7 +33,7 @@ var DEPENDENCIES = {
     "gulp-rimraf@^0.2.0",
     "gulp-uglify@^1.0.1",
     "gulp-util@^3.0.0",
-    "gulp-csso@^2.0.0",
+    "gulp-cssnano@^2.1.2",
     "gulp-filter@^4.0.0",
     "gulp-rev@^7.1.2",
     "rimraf@^2.5.1",
